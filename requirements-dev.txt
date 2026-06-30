@@ -1,0 +1,6 @@
+# Optional developer/analysis conveniences.
+# Not required for smoke generation, judging, or the current matplotlib-only figures.
+
+scikit-learn
+seaborn
+

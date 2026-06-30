@@ -1,0 +1,2 @@
+model,axis_id,judge_mae,judge_spearman,smoothness,endpoint_attraction,content_preservation_mean,n
+qwen35_4b,emotion_apology,0.15,0.970142500145332,0.10000000000000009,0.5,5.0,6

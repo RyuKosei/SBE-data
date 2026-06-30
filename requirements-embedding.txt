@@ -1,0 +1,5 @@
+# Optional: needed for scripts/02_embed_project.py default implementation.
+# Expected install time is usually a few minutes if wheels are available.
+
+sentence-transformers
+

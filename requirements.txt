@@ -1,0 +1,19 @@
+# Minimal extras for this repo.
+#
+# The current slime/SGLang image already appears to include:
+# openai, pandas, numpy, scipy, matplotlib, pyyaml, tqdm, torch,
+# transformers, and sglang.
+#
+# For live generation/judge with SGLang, no extra pip install should be needed.
+#
+# Install optional extras only when needed:
+#   pip install -r requirements-embedding.txt
+#   pip install -r requirements-dev.txt
+
+openai>=1.0.0
+pandas
+numpy
+scipy
+matplotlib
+tqdm
+pyyaml

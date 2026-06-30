@@ -1,0 +1,59 @@
+[
+  {
+    "model": "qwen35_4b",
+    "source": "/home/data_cpfs/lizihua/sbe/data/generations/qwen35_4b/main8axis_v1_4b.jsonl",
+    "out": "/home/data_cpfs/lizihua/sbe/data/judgments/pairwise_samples/main8axis_v1_pairwise_sample_qwen35_4b.jsonl",
+    "rows": 3360,
+    "axes": 8,
+    "scenarios_per_axis": {
+      "concision_detail": 20,
+      "emotion_apology": 20,
+      "empathy_clinical": 20,
+      "expertise_explain": 20,
+      "formality_request": 20,
+      "humor_neutral": 20,
+      "objectivity_cat": 20,
+      "politeness_refusal": 20
+    },
+    "expected_pairs_per_order": 4320,
+    "expected_pairs_bidirectional": 8640
+  },
+  {
+    "model": "qwen35_9b",
+    "source": "/home/data_cpfs/lizihua/sbe/data/generations/qwen35_9b/main8axis_v1_9b.jsonl",
+    "out": "/home/data_cpfs/lizihua/sbe/data/judgments/pairwise_samples/main8axis_v1_pairwise_sample_qwen35_9b.jsonl",
+    "rows": 3360,
+    "axes": 8,
+    "scenarios_per_axis": {
+      "concision_detail": 20,
+      "emotion_apology": 20,
+      "empathy_clinical": 20,
+      "expertise_explain": 20,
+      "formality_request": 20,
+      "humor_neutral": 20,
+      "objectivity_cat": 20,
+      "politeness_refusal": 20
+    },
+    "expected_pairs_per_order": 4320,
+    "expected_pairs_bidirectional": 8640
+  },
+  {
+    "model": "qwen35_35b_a3b",
+    "source": "/home/data_cpfs/lizihua/sbe/data/generations/qwen35_35b_a3b/main8axis_v1_35b.jsonl",
+    "out": "/home/data_cpfs/lizihua/sbe/data/judgments/pairwise_samples/main8axis_v1_pairwise_sample_qwen35_35b_a3b.jsonl",
+    "rows": 3360,
+    "axes": 8,
+    "scenarios_per_axis": {
+      "concision_detail": 20,
+      "emotion_apology": 20,
+      "empathy_clinical": 20,
+      "expertise_explain": 20,
+      "formality_request": 20,
+      "humor_neutral": 20,
+      "objectivity_cat": 20,
+      "politeness_refusal": 20
+    },
+    "expected_pairs_per_order": 4320,
+    "expected_pairs_bidirectional": 8640
+  }
+]

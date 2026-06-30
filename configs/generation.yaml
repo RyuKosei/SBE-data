@@ -1,0 +1,44 @@
+generation:
+  prompt_template: explicit_ratio_v1
+  ratios: [0.0, 0.1, 0.25, 0.5, 0.75, 0.9, 1.0]
+  seeds: [1, 2, 3]
+  temperature: 0.7
+  top_p: 0.9
+  max_tokens: 256
+  concurrency: 64
+  request_timeout_seconds: 120
+  strip_think_blocks: true
+  stop:
+    - "\n\n解释"
+    - "\n\n比例"
+
+splits:
+  smoke:
+    axes: [emotion_apology]
+    scenarios_per_axis: 2
+    ratios: [0.0, 0.5, 1.0]
+    seeds: [1]
+    models: [qwen35_4b]
+
+  pilot:
+    axes: [emotion_apology, formality_request, empathy_clinical]
+    scenarios_per_axis: 10
+    ratios: [0.0, 0.1, 0.25, 0.5, 0.75, 0.9, 1.0]
+    seeds: [1, 2]
+    models: [qwen35_4b, qwen35_9b, qwen35_35b_a3b]
+
+  main:
+    axes:
+      - emotion_apology
+      - expertise_explain
+      - objectivity_cat
+      - formality_request
+      - politeness_refusal
+      - concision_detail
+      - humor_neutral
+      - empathy_clinical
+    scenarios_per_axis: 40
+    ratios: [0.0, 0.1, 0.25, 0.5, 0.75, 0.9, 1.0]
+    seeds: [1, 2, 3]
+    models: [qwen35_4b, qwen35_9b, qwen35_35b_a3b]
+

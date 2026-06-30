@@ -1,0 +1,10 @@
+embedding_model,model,metric,mean,ci95_low,ci95_high,bootstrap_unit,iterations
+/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_35b_a3b,projection_mae,0.1339270597274563,0.1274891572659823,0.1404269467295592,scenario,1000
+/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_4b,projection_mae,0.1591976140311811,0.15273886969080175,0.1660046141327219,scenario,1000
+/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_9b,projection_mae,0.12064792004091206,0.11390322643702114,0.12753843432149545,scenario,1000
+/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_35b_a3b,projection_mae,0.10011148129060224,0.09320136219553349,0.10705665918793662,scenario,1000
+/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_4b,projection_mae,0.14215393087352482,0.1350927863944748,0.14881446143186744,scenario,1000
+/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_9b,projection_mae,0.09142249820109637,0.08551759030413697,0.09761118382758387,scenario,1000
+scalar_judge,qwen35_35b_a3b,judge_mae,0.13573809523809524,0.12404146099496707,0.1474658653846154,scenario,1000
+scalar_judge,qwen35_4b,judge_mae,0.21180952380952384,0.19029786767286766,0.2304547305764411,scenario,1000
+scalar_judge,qwen35_9b,judge_mae,0.1488095238095238,0.13185264308426073,0.16525138754826257,scenario,1000

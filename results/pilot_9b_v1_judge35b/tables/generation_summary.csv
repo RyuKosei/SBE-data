@@ -1,0 +1,4 @@
+model,axis_id,n_generations,n_scenarios,n_seeds,n_ratios,mean_output_chars,think_block_rate
+qwen35_9b,emotion_apology,140,10,2,7,119.11428571428571,0.0
+qwen35_9b,empathy_clinical,140,10,2,7,137.45714285714286,0.0
+qwen35_9b,formality_request,140,10,2,7,99.52857142857142,0.0

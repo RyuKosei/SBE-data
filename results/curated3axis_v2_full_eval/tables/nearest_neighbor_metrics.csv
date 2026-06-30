@@ -1,0 +1,7 @@
+embedding_model,model,n,nn_top1_accuracy,nn_mean_rank,nn_median_rank,nn_rank_std
+/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_35b_a3b,840,0.2857142857142857,2.8845238095238095,2.0,1.7731270430387762
+/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_4b,840,0.2857142857142857,3.275,3.0,2.0643621726761427
+/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_9b,840,0.2869047619047619,2.95,3.0,1.815014849376305
+/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_35b_a3b,840,0.29404761904761906,2.6297619047619047,2.0,1.5782550798263129
+/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_4b,840,0.2916666666666667,3.0654761904761907,3.0,1.9306815786640887
+/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_9b,840,0.2988095238095238,2.630952380952381,2.0,1.5514978875230103

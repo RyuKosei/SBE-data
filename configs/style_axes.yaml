@@ -1,0 +1,60 @@
+style_axes:
+  - axis_id: emotion_apology
+    attribute_name: 愤怒强硬程度
+    style_a: 冷静、客气、宽容，不指责对方
+    style_b: 愤怒、强硬、明确表达投诉意愿，但不使用脏话或人身攻击
+    default_length_zh_chars: [80, 140]
+    scenario_instruction: 生成围绕服务延误、售后、等待、误会等场景的回应文本核心语义。
+
+  - axis_id: expertise_explain
+    attribute_name: 专业术语密度
+    style_a: 面向五岁儿童的幼儿园老师，生动、简单、带比喻
+    style_b: 面向物理学博士后的学术解释，术语密集、严谨、可含公式或专业概念
+    default_length_zh_chars: [90, 160]
+    scenario_instruction: 生成可用浅显或专业方式解释的科学/常识问题。
+
+  - axis_id: objectivity_cat
+    attribute_name: 抒情修辞程度
+    style_a: 客观观察记录，像医学或生物学记录，克制、无感情色彩
+    style_b: 抒情现代散文诗，意象丰富、情感浓、辞藻华丽
+    default_length_zh_chars: [80, 150]
+    scenario_instruction: 生成关于动物、天气、室内物体、自然景象的简单观察语义。
+
+  - axis_id: formality_request
+    attribute_name: 正式程度
+    style_a: 口语、随意、像朋友之间聊天
+    style_b: 正式、公文式、措辞规范、礼貌但有距离感
+    default_length_zh_chars: [70, 130]
+    scenario_instruction: 生成请求、通知、说明、预约、确认类核心语义。
+
+  - axis_id: politeness_refusal
+    attribute_name: 礼貌委婉程度
+    style_a: 直白、不委婉、略显生硬，但不侮辱
+    style_b: 委婉、礼貌、照顾对方面子，给出缓冲理由
+    default_length_zh_chars: [70, 130]
+    scenario_instruction: 生成拒绝邀请、拒绝请求、不同意方案等核心语义。
+
+  - axis_id: concision_detail
+    attribute_name: 详细程度
+    style_a: 极简摘要，只保留必要信息
+    style_b: 详尽说明，包含背景、原因、步骤或补充细节
+    default_length_zh_chars: [70, 160]
+    scenario_instruction: 生成可以简写也可以详细展开的说明性内容。
+
+  - axis_id: humor_neutral
+    attribute_name: 幽默吐槽程度
+    style_a: 中性、平实、无玩笑
+    style_b: 幽默、轻微吐槽、有俏皮表达，但不跑题
+    default_length_zh_chars: [80, 140]
+    scenario_instruction: 生成日常小麻烦、产品体验、学习工作场景的核心语义。
+
+  - axis_id: empathy_clinical
+    attribute_name: 共情温度
+    style_a: 临床冷静、客观描述、少情绪安慰
+    style_b: 高共情、安慰性强、承认对方感受并鼓励
+    default_length_zh_chars: [80, 150]
+    scenario_instruction: 生成压力、失落、身体不适、担忧等需要回应的核心语义；避免医疗诊断。
+
+ratios: [0.0, 0.1, 0.25, 0.5, 0.75, 0.9, 1.0]
+seeds: [1, 2, 3]
+

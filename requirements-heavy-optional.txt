@@ -1,0 +1,5 @@
+# Heavy optional dependencies. Do not install for the first smoke/pilot pass.
+
+FlagEmbedding
+bert-score
+vllm

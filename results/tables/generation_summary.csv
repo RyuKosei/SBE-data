@@ -1,0 +1,2 @@
+model,axis_id,n_generations,n_scenarios,n_seeds,n_ratios,mean_output_chars,think_block_rate
+qwen35_4b,emotion_apology,6,2,1,3,32.0,0.0

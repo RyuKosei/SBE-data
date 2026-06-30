@@ -1,0 +1,34 @@
+models:
+  qwen35_4b:
+    path: /home/data_cpfs/zicheng/models/Qwen3.5-4B
+    served_model_name: qwen35_4b
+    type: qwen
+    role: tested
+    tp: 1
+    base_url: http://127.0.0.1:8001/v1
+    api_key: EMPTY
+
+  qwen35_9b:
+    path: /home/data_cpfs/zicheng/models/Qwen3.5-9B
+    served_model_name: qwen35_9b
+    type: qwen
+    role: tested_and_optional_judge
+    tp: 1
+    base_url: http://127.0.0.1:8002/v1
+    api_key: EMPTY
+
+  qwen35_35b_a3b:
+    path: /home/data_cpfs/zicheng/models/Qwen3.5-35B-A3B
+    served_model_name: qwen35_35b_a3b
+    type: qwen_moe
+    role: tested_and_preferred_judge
+    tp: 2
+    base_url: http://127.0.0.1:8003/v1
+    api_key: EMPTY
+
+judge_policy:
+  avoid_self_judge_as_only_metric: true
+  preferred_judges:
+    - qwen35_35b_a3b
+    - qwen35_9b
+  note: If an unrelated strong model is available, add it here and prefer it for scalar and pairwise judging.

@@ -1,0 +1,16 @@
+model,axis_id,length_violation,n,mean_zh_chars,judge_abs_error
+qwen35_9b,concision_detail,False,18,119.38888888888889,0.4666666666666667
+qwen35_9b,concision_detail,True,3,171.0,0.033333333333333326
+qwen35_9b,emotion_apology,False,14,103.78571428571429,0.11071428571428574
+qwen35_9b,empathy_clinical,False,12,127.0,0.13749999999999996
+qwen35_9b,empathy_clinical,True,2,159.5,0.12500000000000003
+qwen35_9b,expertise_explain,False,15,124.6,0.09666666666666665
+qwen35_9b,expertise_explain,True,6,160.0,0.09999999999999999
+qwen35_9b,formality_request,False,12,105.25,0.075
+qwen35_9b,formality_request,True,2,186.0,0.075
+qwen35_9b,humor_neutral,False,11,112.54545454545455,0.05909090909090908
+qwen35_9b,humor_neutral,True,3,100.66666666666667,0.2833333333333333
+qwen35_9b,objectivity_cat,False,11,124.54545454545455,0.10909090909090909
+qwen35_9b,objectivity_cat,True,3,134.66666666666666,0.21666666666666665
+qwen35_9b,politeness_refusal,False,12,88.5,0.3875
+qwen35_9b,politeness_refusal,True,2,100.0,0.175

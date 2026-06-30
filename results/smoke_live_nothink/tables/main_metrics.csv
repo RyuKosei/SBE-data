@@ -1,0 +1,2 @@
+model,judge_mae,judge_spearman,content_preservation_mean,naturalness_mean,endpoint_attraction,parse_ok_rate,n
+qwen35_4b,0.15,0.970142500145332,5.0,4.666666666666667,0.5,1.0,6

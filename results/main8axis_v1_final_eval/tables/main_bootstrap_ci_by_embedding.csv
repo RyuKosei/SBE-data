@@ -1,0 +1,7 @@
+embedding,embedding_model,model,metric,mean,ci95_low,ci95_high,bootstrap_unit,iterations
+bge_m3,/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_35b_a3b,projection_error,0.14002246543415342,0.13587627629609747,0.144058255926559,scenario_id,1000
+bge_m3,/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_4b,projection_error,0.164475516016971,0.16062965389497172,0.1684778391640365,scenario_id,1000
+bge_m3,/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_9b,projection_error,0.12566427188902005,0.12138238983377209,0.13043908287042613,scenario_id,1000
+text2vec,/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_35b_a3b,projection_error,0.12737164821572583,0.12283972524146836,0.13189164818014884,scenario_id,1000
+text2vec,/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_4b,projection_error,0.15051963292810622,0.14608579012795664,0.15505979701650155,scenario_id,1000
+text2vec,/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_9b,projection_error,0.11076784998995436,0.10621466538454599,0.11554756133349593,scenario_id,1000

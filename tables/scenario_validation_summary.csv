@@ -1,0 +1,9 @@
+axis_id,candidate_count,filtered_count,final_count,domain_count,reject_count,top_reject_reasons,final_validation_issues
+concision_detail,80,50,40,11,0,,
+emotion_apology,80,50,40,11,3,near_duplicate_content:3,
+empathy_clinical,80,50,40,12,0,,
+expertise_explain,80,50,40,10,9,near_duplicate_content:8; content_too_short:1,
+formality_request,80,50,40,11,0,,
+humor_neutral,80,50,40,10,0,,
+objectivity_cat,90,50,40,11,0,,
+politeness_refusal,80,50,40,10,2,near_duplicate_content:1; risk_pattern:1,

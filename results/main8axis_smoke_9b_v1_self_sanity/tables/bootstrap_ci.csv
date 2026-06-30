@@ -1,0 +1,2 @@
+model,metric,mean,ci95_low,ci95_high,bootstrap_unit,iterations
+qwen35_9b,judge_mae,0.18639999999999998,0.1315937301587302,0.25557539682539676,scenario,1000

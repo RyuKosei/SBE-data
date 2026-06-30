@@ -1,0 +1,7 @@
+embedding,embedding_model,model,nearest_neighbor_top1_rate,nearest_neighbor_mean_rank,nearest_neighbor_median_rank,n
+bge_m3,/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_9b,0.2875,3.0150297619047617,3.0,6720
+bge_m3,/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_35b_a3b,0.28720238095238093,3.019791666666667,3.0,6720
+bge_m3,/home/data_cpfs/zicheng/models/bge-m3 (cls),qwen35_4b,0.2869047619047619,3.313392857142857,3.0,6720
+text2vec,/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_9b,0.2912202380952381,2.8739583333333334,3.0,6720
+text2vec,/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_35b_a3b,0.2918154761904762,2.8988095238095237,2.0,6720
+text2vec,/home/data_cpfs/zicheng/models/text2vec-base-chinese (mean),qwen35_4b,0.2892857142857143,3.1919642857142856,3.0,6720
