@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-15T13:22:17.706691Z",
-  "git_commit": "e5ab4c755f4fe7b5a739554adf57bd3e98a664a4",
+  "generated_at": "2026-09-15T13:29:46.604886Z",
+  "git_commit": "ad10aad52cdd974402c98d109e5108a6755ee096",
   "legacy_scenarios": {
     "path": "/home/data_cpfs/lizihua/sbe/data/scenarios/styleblend_8axis_scenarios_v1.jsonl",
     "sha256": "c6b7ba3e514eff070ab7ccd7d6a5929dc2a3ee0147db2b7eed802b859f6b16fc",
