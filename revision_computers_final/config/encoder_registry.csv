@@ -1,0 +1,4 @@
+encoder_id,model_card_name,checkpoint_path,checkpoint_revision,pooling,normalize,max_length,truncation,instruction_prefix,batch_size,device_policy,notes
+bge_m3,BAAI/bge-m3,/home/data_cpfs/zicheng/models/bge-m3,5617a9f61b028005a4858fdac845db406aefb181,cls,true,512,longest_first,,64,cuda,"Exact legacy checkpoint and pooling"
+text2vec_base_chinese,shibing624/text2vec-base-chinese,/home/data_cpfs/zicheng/models/text2vec-base-chinese,183bb99aa7af74355fb58d16edf8c13ae7c5433e,mean,true,512,longest_first,,128,cuda,"Exact legacy checkpoint and pooling"
+multilingual_e5_large_instruct,intfloat/multilingual-e5-large-instruct,/home/data_cpfs/lizihua/sbe/revision_computers_final/models/multilingual-e5-large-instruct,274baa43b0e13e37fafa6428dbc7938e62e5c439,mean,true,512,longest_first,"Instruct: Represent the Chinese passage for style comparison\nQuery: ",64,cuda,"Downloaded 2026-09-15; identical instruction prefix is applied to every evaluated text"

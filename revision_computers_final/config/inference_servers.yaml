@@ -1,0 +1,35 @@
+framework: sglang
+framework_version: 0.5.10.post1
+context_length: 4096
+mem_fraction_static: 0.88
+host: 127.0.0.1
+servers:
+  - model_id: qwen35_4b
+    port: 18101
+    cuda_visible_devices: "0"
+    tensor_parallel_size: 1
+    request_concurrency: 64
+  - model_id: qwen35_9b
+    port: 18102
+    cuda_visible_devices: "1"
+    tensor_parallel_size: 1
+    request_concurrency: 48
+  - model_id: qwen35_35b_a3b
+    port: 18103
+    cuda_visible_devices: "2"
+    tensor_parallel_size: 1
+    request_concurrency: 32
+  - model_id: qwen36_27b
+    port: 18104
+    cuda_visible_devices: "3"
+    tensor_parallel_size: 1
+    request_concurrency: 32
+  - model_id: qwen36_35b_a3b
+    port: 18105
+    cuda_visible_devices: "4"
+    tensor_parallel_size: 1
+    request_concurrency: 32
+notes:
+  - "Each 67 GB BF16 checkpoint is smoke-tested on one 80 GB L20Z before full generation."
+  - "If a 35B server OOMs, relaunch it with tensor parallel size 2 on an explicit adjacent GPU pair and record the override in its run manifest."
+  - "Direct speed comparisons are made only for identical hardware, framework, precision, and effective batch/concurrency conditions."

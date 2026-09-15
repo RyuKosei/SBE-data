@@ -1,0 +1,37 @@
+version: 1
+frozen_before_new_model_ranking: true
+epsilon_endpoint_norm: 1.0e-12
+low_endpoint_separation:
+  rule: encoder_specific_percentile
+  warning_percentile: 20
+  severe_percentile: 10
+early_overshoot:
+  definition: "raw projection exceeds the target by at least 0.20 at either 1/6 or 2/6"
+  threshold: 0.20
+late_under_response:
+  definition: "raw projection trails the target by at least 0.20 at either 4/6 or 5/6"
+  threshold: 0.20
+non_monotonic_reversal:
+  definition: "an adjacent raw-projection change is less than -0.10"
+  threshold: -0.10
+near_constant_response:
+  definition: "range of the five interior raw projections is at most 0.15"
+  threshold: 0.15
+endpoint_collapse:
+  definition: "endpoint separation is in the encoder-specific lowest 10 percent"
+  percentile: 10
+out_of_range_extrapolation:
+  definition: "any interior raw projection is below 0 or above 1"
+high_off_axis_drift:
+  definition: "mean normalized interior off-axis drift is in the highest 10 percent"
+  percentile: 90
+curved_trajectory:
+  definition: "ordered path length ratio is in the highest 10 percent or endpoint-to-PC1 absolute cosine is below 0.80"
+  path_length_percentile: 90
+  endpoint_pc1_abs_cosine: 0.80
+length_dominated_control:
+  definition: "absolute within-trajectory Pearson correlation between character length and target ratio is at least 0.80 while ICE exceeds the model-encoder median"
+  absolute_correlation: 0.80
+content_style_entanglement:
+  definition: "any interior output fails the fixed content-preservation pass while its absolute projection error is below 0.10"
+  projection_error_upper: 0.10

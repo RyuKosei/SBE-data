@@ -1,0 +1,73 @@
+experiment_id: computers_final_main_three_seed_v1
+scope: qwen_family_only
+scenario_file: /home/data_cpfs/lizihua/sbe/data/scenarios/styleblend_8axis_scenarios_v1.jsonl
+output_file: /home/data_cpfs/lizihua/sbe/revision_computers_final/data/qwen_family_outputs.jsonl
+model_registry: /home/data_cpfs/lizihua/sbe/revision_computers_final/config/model_registry.csv
+models:
+  - qwen35_4b
+  - qwen35_9b
+  - qwen35_35b_a3b
+  - qwen36_27b
+  - qwen36_35b_a3b
+target_ratios:
+  - 0.0
+  - 0.16666666666666666
+  - 0.3333333333333333
+  - 0.5
+  - 0.6666666666666666
+  - 0.8333333333333334
+  - 1.0
+interior_ratios:
+  - 0.16666666666666666
+  - 0.3333333333333333
+  - 0.5
+  - 0.6666666666666666
+  - 0.8333333333333334
+seeds:
+  - 1
+  - 2
+  - 3
+selection_seed: 20260916
+generation:
+  prompt_template_id: computers_explicit_ratio_v1
+  temperature: 0.7
+  top_p: 0.9
+  max_new_tokens: 256
+  thinking: disabled
+  pass_seed_to_server: true
+  request_timeout_seconds: 180
+  retry_attempts: 3
+  concurrency: 64
+legacy_reuse:
+  enabled: false
+  reasons:
+    - "Legacy ratios were 0, 0.1, 0.25, 0.5, 0.75, 0.9, 1 rather than sixths."
+    - "Legacy requests recorded pass_seed=false, so nominal seed labels were not sent to the server."
+encoders:
+  - encoder_id: bge_m3
+    checkpoint_path: /home/data_cpfs/zicheng/models/bge-m3
+    pooling: cls
+    normalize: true
+    max_length: 512
+    instruction_prefix: ""
+    checkpoint_revision: 5617a9f61b028005a4858fdac845db406aefb181
+  - encoder_id: text2vec_base_chinese
+    checkpoint_path: /home/data_cpfs/zicheng/models/text2vec-base-chinese
+    pooling: mean
+    normalize: true
+    max_length: 512
+    instruction_prefix: ""
+    checkpoint_revision: 183bb99aa7af74355fb58d16edf8c13ae7c5433e
+  - encoder_id: multilingual_e5_large_instruct
+    checkpoint_path: /home/data_cpfs/lizihua/sbe/revision_computers_final/models/multilingual-e5-large-instruct
+    pooling: mean
+    normalize: true
+    max_length: 512
+    instruction_prefix: "Instruct: Represent the Chinese passage for style comparison\nQuery: "
+    checkpoint_revision: 274baa43b0e13e37fafa6428dbc7938e62e5c439
+statistics:
+  bootstrap_unit: scenario_id
+  bootstrap_iterations: 10000
+  bootstrap_seed: 20260916
+  multiple_comparison_correction: holm
+  seed_aggregation: aggregate_within_scenario_ratio_model_before_scenario_level_inference
