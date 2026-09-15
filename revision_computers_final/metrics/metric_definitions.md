@@ -57,8 +57,12 @@ with `K=7`. Primary mean rank again excludes endpoint targets.
 Leave-one-seed-out diagnostics form an empirical center at every target ratio
 from two seeds and test the third, rotating over all three seeds. They compare
 the training-endpoint line, exact per-ratio empirical centers, and the piecewise
-linear empirical path. Errors and off-path distances are normalized by the
-training-center endpoint separation.
+linear empirical path. For each reference, three separate quantities are
+reported: (i) along-trajectory ratio error, (ii) nearest-ratio identification
+accuracy, and (iii) off-trajectory distance normalized by the training-center
+endpoint separation. The endpoint-line and true-centroid normalized Euclidean
+target distances are retained as additional diagnostics, but are not compared
+as though they had the same units as ratio error.
 
 ## Baselines
 
@@ -79,3 +83,19 @@ Seeds are first aggregated within `scenario × target ratio × model` cells.
 Inference and 10,000-replicate bootstrap intervals use scenario as the
 independent unit while preserving style axis as a stratum. Paired comparisons
 use the same scenarios and apply Holm correction to families of tests.
+
+The prescribed three seeds are retained for main generation, leave-one-seed-out
+trajectory construction, and the preregistered prompt/temperature experiment.
+No additional seed sweep is applied to encoders, deterministic baselines,
+shared-anchor projection, content checking, or downstream statistical models.
+
+## Content preservation
+
+The fixed automatic evaluator judges every atomic content checkpoint, factual
+contradiction, newly added key information, whether an addition changes the task
+result, naturalness, and scalar style-B intensity. Content coverage is the
+fraction of atomic checkpoints marked covered. `content-preservation pass` is
+true exactly when coverage is at least 0.90, no factual contradiction is found,
+no addition changes the task result, and the item is not marked unjudgeable.
+The evaluator is fixed by `config/evaluator.yaml` and its validation against
+human labels remains external pending until genuine annotations are returned.

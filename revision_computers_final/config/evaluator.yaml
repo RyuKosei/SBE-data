@@ -1,0 +1,14 @@
+evaluator_id: qwen36_35b_a3b_content_style_judge_v1
+model_id: qwen36_35b_a3b
+served_model_name: qwen36_35b_a3b
+checkpoint_path: /home/data_cpfs/zicheng/models/Qwen3.6-35B-A3B
+temperature: 0.0
+top_p: 1.0
+max_tokens: 256
+seed: 20260917
+thinking: disabled
+output_schema_version: content_style_v1
+content_preservation_pass:
+  minimum_coverage: 0.90
+  require_no_factual_contradiction: true
+  require_no_task_changing_addition: true

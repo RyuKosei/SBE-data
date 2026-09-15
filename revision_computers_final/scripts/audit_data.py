@@ -359,7 +359,7 @@ def markdown_report(audit: dict[str, Any]) -> str:
             "## Model/checkpoint history relevant to reuse",
             "",
             "- Historical tested checkpoints: Qwen3.5-4B, Qwen3.5-9B, and Qwen3.5-35B-A3B from `/home/data_cpfs/zicheng/models/`.",
-            "- Revision additions found on cluster: official Qwen3.6-27B Dense at `/home/data_cpfs/lgx/model/Qwen3.6-27B-base` and Qwen3.6-35B-A3B at `/home/accio_data/zicheng/models/Qwen3.6-35B-A3B`.",
+            "- Revision additions found on cluster: official Qwen3.6-27B Dense at `/home/data_cpfs/lgx/model/Qwen3.6-27B-base` and Qwen3.6-35B-A3B at `/home/data_cpfs/zicheng/models/Qwen3.6-35B-A3B`; its Accio duplicate has matching config and index hashes.",
             "- The new main grid and server-side seed requirement differ from the legacy run, so legacy generations are audit evidence rather than revision main-experiment rows.",
             "",
             "## Implementation differences that change paper values",

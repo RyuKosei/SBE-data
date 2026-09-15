@@ -1,7 +1,7 @@
 # StyleBlend-Bench Legacy Data Audit
 
-Generated: 2026-09-15T12:01:19.351696Z
-Git commit: `2c5076dc4e82580188ac0fe50cdde7643bff4c58`
+Generated: 2026-09-15T13:22:17.706691Z
+Git commit: `e5ab4c755f4fe7b5a739554adf57bd3e98a664a4`
 
 ## Executive findings
 
@@ -48,7 +48,7 @@ The endpoint rows have zero projection error, zero off-axis drift, and zero inte
 ## Model/checkpoint history relevant to reuse
 
 - Historical tested checkpoints: Qwen3.5-4B, Qwen3.5-9B, and Qwen3.5-35B-A3B from `/home/data_cpfs/zicheng/models/`.
-- Revision additions found on cluster: official Qwen3.6-27B Dense at `/home/data_cpfs/lgx/model/Qwen3.6-27B-base` and Qwen3.6-35B-A3B at `/home/accio_data/zicheng/models/Qwen3.6-35B-A3B`.
+- Revision additions found on cluster: official Qwen3.6-27B Dense at `/home/data_cpfs/lgx/model/Qwen3.6-27B-base` and Qwen3.6-35B-A3B at `/home/data_cpfs/zicheng/models/Qwen3.6-35B-A3B`; its Accio duplicate has matching config and index hashes.
 - The new main grid and server-side seed requirement differ from the legacy run, so legacy generations are audit evidence rather than revision main-experiment rows.
 
 ## Implementation differences that change paper values

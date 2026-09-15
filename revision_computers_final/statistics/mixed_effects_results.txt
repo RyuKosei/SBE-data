@@ -1,0 +1,95 @@
+Mixed-effects models use seed-averaged interior cells and a random intercept for scenario_id.
+Architecture, version, and parameter count are strongly confounded in this five-model panel; coefficients are associative, not causal.
+
+================================================================================
+projection_error_raw ~ C(family_version) + log_active_parameters + C(architecture) + target_ratio + C(style_axis) + C(encoder_id) + endpoint_separation + character_length + C(family_version):target_ratio
+MixedLM failed: LinAlgError('Singular matrix')
+Fallback: OLS with scenario-clustered standard errors.
+                             OLS Regression Results
+================================================================================
+Dep. Variable:     projection_error_raw   R-squared:                       0.079
+Model:                              OLS   Adj. R-squared:                  0.079
+Method:                   Least Squares   F-statistic:                     78.52
+Date:                  Tue, 15 Sep 2026   Prob (F-statistic):          3.03e-100
+Time:                          13:24:41   Log-Likelihood:                 20559.
+No. Observations:                 24000   AIC:                        -4.108e+04
+Df Residuals:                     23983   BIC:                        -4.095e+04
+Df Model:                            16
+Covariance Type:                cluster
+===================================================================================================================
+                                                      coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                           0.4220      0.042      9.994      0.000       0.339       0.505
+C(family_version)[T.Qwen3.6]                        0.0346      0.006      5.775      0.000       0.023       0.046
+C(architecture)[T.MoE]                             -0.0162      0.004     -4.525      0.000      -0.023      -0.009
+C(style_axis)[T.emotion_apology]                   -0.0419      0.005     -8.629      0.000      -0.051      -0.032
+C(style_axis)[T.empathy_clinical]                  -0.0529      0.004    -12.800      0.000      -0.061      -0.045
+C(style_axis)[T.expertise_explain]                 -0.0613      0.005    -12.281      0.000      -0.071      -0.052
+C(style_axis)[T.formality_request]                 -0.0890      0.004    -23.281      0.000      -0.097      -0.082
+C(style_axis)[T.humor_neutral]                     -0.0411      0.004    -11.367      0.000      -0.048      -0.034
+C(style_axis)[T.objectivity_cat]                   -0.0580      0.005    -12.880      0.000      -0.067      -0.049
+C(style_axis)[T.politeness_refusal]                -0.0326      0.004     -8.359      0.000      -0.040      -0.025
+C(encoder_id)[T.multilingual_e5_large_instruct]    -0.0192      0.003     -5.696      0.000      -0.026      -0.013
+C(encoder_id)[T.text2vec_base_chinese]             -0.0110      0.001    -10.013      0.000      -0.013      -0.009
+log_active_parameters                              -0.0079      0.002     -4.095      0.000      -0.012      -0.004
+target_ratio                                        0.0514      0.010      4.948      0.000       0.031       0.072
+C(family_version)[T.Qwen3.6]:target_ratio          -0.0469      0.011     -4.421      0.000      -0.068      -0.026
+endpoint_separation                                -0.0555      0.011     -5.120      0.000      -0.077      -0.034
+character_length                                -3.744e-05   3.83e-05     -0.977      0.328      -0.000    3.76e-05
+==============================================================================
+Omnibus:                     3508.498   Durbin-Watson:                   1.603
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5594.534
+Skew:                           1.014   Prob(JB):                         0.00
+Kurtosis:                       4.216   Cond. No.                     7.18e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 7.18e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+================================================================================
+off_axis_drift_normalized ~ C(family_version) + log_active_parameters + C(architecture) + target_ratio + C(style_axis) + C(encoder_id) + endpoint_separation + character_length + C(family_version):target_ratio
+MixedLM failed: LinAlgError('Singular matrix')
+Fallback: OLS with scenario-clustered standard errors.
+                                OLS Regression Results
+=====================================================================================
+Dep. Variable:     off_axis_drift_normalized   R-squared:                       0.533
+Model:                                   OLS   Adj. R-squared:                  0.532
+Method:                        Least Squares   F-statistic:                     177.6
+Date:                       Tue, 15 Sep 2026   Prob (F-statistic):          3.95e-148
+Time:                               13:24:42   Log-Likelihood:                 20561.
+No. Observations:                      24000   AIC:                        -4.109e+04
+Df Residuals:                          23983   BIC:                        -4.095e+04
+Df Model:                                 16
+Covariance Type:                     cluster
+===================================================================================================================
+                                                      coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                           1.9287      0.077     24.964      0.000       1.777       2.080
+C(family_version)[T.Qwen3.6]                        0.0369      0.006      6.162      0.000       0.025       0.049
+C(architecture)[T.MoE]                             -0.0704      0.006    -11.499      0.000      -0.082      -0.058
+C(style_axis)[T.emotion_apology]                   -0.1710      0.012    -14.186      0.000      -0.195      -0.147
+C(style_axis)[T.empathy_clinical]                  -0.1635      0.011    -14.256      0.000      -0.186      -0.141
+C(style_axis)[T.expertise_explain]                 -0.1840      0.013    -13.759      0.000      -0.210      -0.158
+C(style_axis)[T.formality_request]                 -0.1762      0.012    -14.935      0.000      -0.199      -0.153
+C(style_axis)[T.humor_neutral]                     -0.0933      0.011     -8.201      0.000      -0.116      -0.071
+C(style_axis)[T.objectivity_cat]                   -0.1663      0.012    -13.664      0.000      -0.190      -0.142
+C(style_axis)[T.politeness_refusal]                -0.0611      0.012     -5.197      0.000      -0.084      -0.038
+C(encoder_id)[T.multilingual_e5_large_instruct]    -0.1871      0.009    -21.222      0.000      -0.204      -0.170
+C(encoder_id)[T.text2vec_base_chinese]             -0.0436      0.003    -15.930      0.000      -0.049      -0.038
+log_active_parameters                              -0.0352      0.003    -10.057      0.000      -0.042      -0.028
+target_ratio                                       -0.0020      0.006     -0.326      0.745      -0.014       0.010
+C(family_version)[T.Qwen3.6]:target_ratio          -0.0081      0.007     -1.106      0.269      -0.022       0.006
+endpoint_separation                                -0.4670      0.029    -15.941      0.000      -0.524      -0.410
+character_length                                -4.459e-05      0.000     -0.406      0.685      -0.000       0.000
+==============================================================================
+Omnibus:                     5105.545   Durbin-Watson:                   1.050
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            24743.582
+Skew:                           0.953   Prob(JB):                         0.00
+Kurtosis:                       7.595   Cond. No.                     7.18e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 7.18e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

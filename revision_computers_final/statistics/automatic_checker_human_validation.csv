@@ -1,0 +1,2 @@
+status,required_sample_count,note
+external_pending,320,"Accuracy, precision, recall, F1, kappa, and confusion matrices require real ratings."

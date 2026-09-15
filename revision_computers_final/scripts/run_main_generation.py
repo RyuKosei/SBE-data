@@ -170,6 +170,9 @@ async def generate_one(
     dry_run: bool,
 ) -> tuple[dict[str, Any] | None, dict[str, Any] | None]:
     async with semaphore:
+        temperature = float(job.get("temperature", generation["temperature"]))
+        top_p = float(job.get("top_p", generation["top_p"]))
+        max_new_tokens = int(job.get("max_new_tokens", generation["max_new_tokens"]))
         last_error: Exception | None = None
         started = time.perf_counter()
         for attempt in range(1, int(generation["retry_attempts"]) + 1):
@@ -187,9 +190,9 @@ async def generate_one(
                             {"role": "system", "content": SYSTEM_PROMPT},
                             {"role": "user", "content": job["prompt"]},
                         ],
-                        temperature=float(generation["temperature"]),
-                        top_p=float(generation["top_p"]),
-                        max_tokens=int(generation["max_new_tokens"]),
+                        temperature=temperature,
+                        top_p=top_p,
+                        max_tokens=max_new_tokens,
                         timeout=float(generation["request_timeout_seconds"]),
                         extra_body={
                             "seed": int(job["seed"]),
@@ -202,12 +205,19 @@ async def generate_one(
                     prompt_tokens = int(usage.prompt_tokens) if usage else -1
                     completion_tokens = int(usage.completion_tokens) if usage else -1
                 latency = time.perf_counter() - attempt_started
+                cleaned = strip_thinking(generated)
+                if not cleaned:
+                    raise ValueError("empty generated_text after thinking-block removal")
+                import hashlib
+
                 row = {
                     **job,
-                    "generated_text": strip_thinking(generated),
-                    "temperature": float(generation["temperature"]),
-                    "top_p": float(generation["top_p"]),
-                    "max_new_tokens": int(generation["max_new_tokens"]),
+                    "generated_text": cleaned,
+                    "raw_response_sha256": hashlib.sha256(generated.encode("utf-8")).hexdigest(),
+                    "thinking_block_removed": cleaned != generated.strip(),
+                    "temperature": temperature,
+                    "top_p": top_p,
+                    "max_new_tokens": max_new_tokens,
                     "thinking": "disabled",
                     "seed_passed_to_server": not dry_run,
                     "prompt_tokens": prompt_tokens,

@@ -1,0 +1,2 @@
+status,required_scenarios,note
+external_pending,80,Self/shared metrics and ranking flips require approved human-independent reference endpoints.

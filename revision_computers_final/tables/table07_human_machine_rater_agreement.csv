@@ -1,0 +1,2 @@
+status,required_unique_texts,required_formal_ratings,note
+external_pending,320,960,"No real ratings were simulated; ICC, alpha, kappa, and human-machine agreement await annotation."

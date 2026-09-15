@@ -1,0 +1,30 @@
+{
+  "primary_key": ["scenario_id", "model_id", "target_ratio", "seed"],
+  "required_generation_fields": {
+    "run_id": "string",
+    "scenario_id": "string",
+    "style_axis": "string",
+    "style_A": "string",
+    "style_B": "string",
+    "target_ratio": "float in {0,1/6,2/6,3/6,4/6,5/6,1}",
+    "model_id": "string",
+    "family_version": "string",
+    "architecture": "Dense or MoE",
+    "seed": "integer",
+    "prompt_template_id": "string",
+    "temperature": "float",
+    "top_p": "float",
+    "max_new_tokens": "integer",
+    "endpoint_mode": "string",
+    "generated_text": "string",
+    "input_text": "string",
+    "timestamp": "UTC ISO-8601 string",
+    "git_commit": "string"
+  },
+  "independent_statistical_unit": "scenario_id",
+  "aggregation_order": [
+    "aggregate seeds within scenario/model/ratio",
+    "calculate scenario-level summaries",
+    "bootstrap scenarios stratified by style_axis"
+  ]
+}

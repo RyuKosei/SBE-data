@@ -1,0 +1,10 @@
+encoder_first,encoder_second,metric,model_count,spearman_rank_correlation,kendall_rank_correlation
+bge_m3,multilingual_e5_large_instruct,interior_calibration_error_estimate,5,1.0,1.0
+bge_m3,multilingual_e5_large_instruct,normalized_off_axis_drift_estimate,5,1.0,1.0
+bge_m3,multilingual_e5_large_instruct,spearman_monotonicity_estimate,5,1.0,1.0
+bge_m3,text2vec_base_chinese,interior_calibration_error_estimate,5,1.0,1.0
+bge_m3,text2vec_base_chinese,normalized_off_axis_drift_estimate,5,0.8999999999999998,0.7999999999999999
+bge_m3,text2vec_base_chinese,spearman_monotonicity_estimate,5,1.0,1.0
+multilingual_e5_large_instruct,text2vec_base_chinese,interior_calibration_error_estimate,5,1.0,1.0
+multilingual_e5_large_instruct,text2vec_base_chinese,normalized_off_axis_drift_estimate,5,0.8999999999999998,0.7999999999999999
+multilingual_e5_large_instruct,text2vec_base_chinese,spearman_monotonicity_estimate,5,1.0,1.0

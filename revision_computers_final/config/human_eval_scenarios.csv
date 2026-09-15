@@ -1,0 +1,17 @@
+scenario_id,style_axis,selection_seed,purpose,input_text,style_A,style_B
+concision_detail_032,concision_detail,20260916,human_evaluation,阐述节能减排在日常生活中的具体实践方法。,极简摘要，只保留必要信息,详尽说明，包含背景、原因、步骤或补充细节
+concision_detail_033,concision_detail,20260916,human_evaluation,向社区申请垃圾分类投放点优化方案需提交周边人流数据与现有设施评估报告。,极简摘要，只保留必要信息,详尽说明，包含背景、原因、步骤或补充细节
+emotion_apology_030,emotion_apology,20260916,human_evaluation,小区公共区域照明损坏，物业需向居民致歉并告知维修进度。,冷静、客气、宽容，不指责对方,愤怒、强硬、明确表达投诉意愿，但不使用脏话或人身攻击
+emotion_apology_009,emotion_apology,20260916,human_evaluation,公共交通班次取消影响出行计划，要求相关部门尽快提供替代路线指引。,冷静、客气、宽容，不指责对方,愤怒、强硬、明确表达投诉意愿，但不使用脏话或人身攻击
+empathy_clinical_019,empathy_clinical,20260916,human_evaluation,计划已久的旅行因天气原因被迫取消，感到失落且不知如何重新安排。,临床冷静、客观描述、少情绪安慰,高共情、安慰性强、承认对方感受并鼓励
+empathy_clinical_011,empathy_clinical,20260916,human_evaluation,在公园散步时看到环境脏乱差，担心影响健康，希望相关部门改善。,临床冷静、客观描述、少情绪安慰,高共情、安慰性强、承认对方感受并鼓励
+expertise_explain_011,expertise_explain,20260916,human_evaluation,为什么煮熟的鸡蛋会变硬，而生鸡蛋是软的？,面向五岁儿童的幼儿园老师，生动、简单、带比喻,面向物理学博士后的学术解释，术语密集、严谨、可含公式或专业概念
+expertise_explain_021,expertise_explain,20260916,human_evaluation,讲述为什么洗澡时身体会感觉变轻。,面向五岁儿童的幼儿园老师，生动、简单、带比喻,面向物理学博士后的学术解释，术语密集、严谨、可含公式或专业概念
+formality_request_034,formality_request,20260916,human_evaluation,关于本季度学生综合素质评价结果，请家长于本周五前登录系统查看。,口语、随意、像朋友之间聊天,正式、公文式、措辞规范、礼貌但有距离感
+formality_request_038,formality_request,20260916,human_evaluation,请提前预约下个月的技术培训课程，名额有限，需尽快报名。,口语、随意、像朋友之间聊天,正式、公文式、措辞规范、礼貌但有距离感
+humor_neutral_020,humor_neutral,20260916,human_evaluation,员工因打印机卡纸导致文件无法打印，需要向行政人员报修并说明紧急程度。,中性、平实、无玩笑,幽默、轻微吐槽、有俏皮表达，但不跑题
+humor_neutral_018,humor_neutral,20260916,human_evaluation,科技爱好者讨论最新款智能手机的电池续航表现，分享日常使用中的实际体验。,中性、平实、无玩笑,幽默、轻微吐槽、有俏皮表达，但不跑题
+objectivity_cat_015,objectivity_cat,20260916,human_evaluation,图书馆角落的书架上，一本泛黄的书被读者轻轻翻开，书页间夹着干枯的银杏叶。,客观观察记录，像医学或生物学记录，克制、无感情色彩,抒情现代散文诗，意象丰富、情感浓、辞藻华丽
+objectivity_cat_014,objectivity_cat,20260916,human_evaluation,老式座钟的摆锤在墙面上投下规律的阴影，秒针跳动声清晰可闻。,客观观察记录，像医学或生物学记录，克制、无感情色彩,抒情现代散文诗，意象丰富、情感浓、辞藻华丽
+politeness_refusal_007,politeness_refusal,20260916,human_evaluation,旅行社推荐高价豪华游套餐，请直接表示不需要并拒绝购买。,直白、不委婉、略显生硬，但不侮辱,委婉、礼貌、照顾对方面子，给出缓冲理由
+politeness_refusal_018,politeness_refusal,20260916,human_evaluation,同事提出增加工作量请求，需要表示无法承担。,直白、不委婉、略显生硬，但不侮辱,委婉、礼貌、照顾对方面子，给出缓冲理由

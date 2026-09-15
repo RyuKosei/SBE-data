@@ -1,0 +1,2 @@
+status=external_pending
+No real human ratings are present. No scores were simulated and no human-machine agreement statistic was computed.

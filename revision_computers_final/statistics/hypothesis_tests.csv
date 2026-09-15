@@ -1,0 +1,25 @@
+hypothesis,encoder_id,model_id,test,estimate,ci_lower,ci_upper,supported,note
+H1,bge_m3,qwen35_35b_a3b,paired 5-point minus 7-point ICE,0.053073158931183154,0.05197652548295765,0.05421958544080301,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,bge_m3,qwen35_4b,paired 5-point minus 7-point ICE,0.0596736590988476,0.05856516516117113,0.06076207145375763,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,bge_m3,qwen35_9b,paired 5-point minus 7-point ICE,0.04610700691646099,0.04503227861704953,0.047176004556591544,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,bge_m3,qwen36_27b,paired 5-point minus 7-point ICE,0.0541868325004653,0.05299062641655833,0.0553828478175475,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,bge_m3,qwen36_35b_a3b,paired 5-point minus 7-point ICE,0.050913414644481535,0.049781713288877864,0.05202670367688883,True,Seven-point value includes two mechanically zero endpoint errors.
+H2,bge_m3,,Spearman endpoint separation vs ICE,-0.37518169343034896,-0.4175068097208991,-0.33078034261208084,True,"Scenario-level, style-axis-stratified bootstrap."
+H2,bge_m3,,Spearman endpoint separation vs drift,-0.6616064771900302,-0.6951083853115271,-0.6267516132902491,True,"Scenario-level, style-axis-stratified bootstrap."
+H5,bge_m3,,Spearman ICE vs drift,0.39579187726245213,0.35318066325937003,0.437893580566119,True,"Scenario-level, style-axis-stratified bootstrap."
+H1,multilingual_e5_large_instruct,qwen35_35b_a3b,paired 5-point minus 7-point ICE,0.05328198092182106,0.05196155819507367,0.054608020413775014,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,multilingual_e5_large_instruct,qwen35_4b,paired 5-point minus 7-point ICE,0.057719263316582434,0.056526793185143254,0.0588931749677102,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,multilingual_e5_large_instruct,qwen35_9b,paired 5-point minus 7-point ICE,0.04526072786855422,0.04406260865185797,0.04642252836038815,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,multilingual_e5_large_instruct,qwen36_27b,paired 5-point minus 7-point ICE,0.0541455369146709,0.052871652049244454,0.05545360001747911,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,multilingual_e5_large_instruct,qwen36_35b_a3b,paired 5-point minus 7-point ICE,0.04962207328597151,0.04840103488277976,0.05081996970943809,True,Seven-point value includes two mechanically zero endpoint errors.
+H2,multilingual_e5_large_instruct,,Spearman endpoint separation vs ICE,-0.31732863372212256,-0.3622695096199093,-0.2710937561740625,True,"Scenario-level, style-axis-stratified bootstrap."
+H2,multilingual_e5_large_instruct,,Spearman endpoint separation vs drift,-0.8087675532295131,-0.829758730744166,-0.7866060357418411,True,"Scenario-level, style-axis-stratified bootstrap."
+H5,multilingual_e5_large_instruct,,Spearman ICE vs drift,0.33797158612171335,0.28948001282553154,0.38579023255527645,True,"Scenario-level, style-axis-stratified bootstrap."
+H1,text2vec_base_chinese,qwen35_35b_a3b,paired 5-point minus 7-point ICE,0.050143598116970375,0.04898847782415359,0.05131192986888814,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,text2vec_base_chinese,qwen35_4b,paired 5-point minus 7-point ICE,0.05561224545694647,0.054422887739836674,0.05678731970228972,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,text2vec_base_chinese,qwen35_9b,paired 5-point minus 7-point ICE,0.04242526614115544,0.041328398220220185,0.04349873869531438,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,text2vec_base_chinese,qwen36_27b,paired 5-point minus 7-point ICE,0.0538683607635889,0.0526284864967323,0.05516179795911245,True,Seven-point value includes two mechanically zero endpoint errors.
+H1,text2vec_base_chinese,qwen36_35b_a3b,paired 5-point minus 7-point ICE,0.04756564157434373,0.046418449198880773,0.04874281261321374,True,Seven-point value includes two mechanically zero endpoint errors.
+H2,text2vec_base_chinese,,Spearman endpoint separation vs ICE,-0.4129299669648309,-0.45188016976023226,-0.37346497451069643,True,"Scenario-level, style-axis-stratified bootstrap."
+H2,text2vec_base_chinese,,Spearman endpoint separation vs drift,-0.8106992463668933,-0.8302979166443836,-0.7894555866745183,True,"Scenario-level, style-axis-stratified bootstrap."
+H5,text2vec_base_chinese,,Spearman ICE vs drift,0.4916501236914546,0.4519219054192722,0.5307006831393628,True,"Scenario-level, style-axis-stratified bootstrap."
