@@ -1,0 +1,66 @@
+{
+  "run_id": "embed_bge_m3_qwen35_9b_20260915T122314Z",
+  "git_commit": "e5ab4c755f4fe7b5a739554adf57bd3e98a664a4",
+  "command": [
+    "revision_computers_final/scripts/embed_outputs.py",
+    "--encoder-id",
+    "bge_m3",
+    "--model-id",
+    "qwen35_9b",
+    "--device",
+    "cuda:0",
+    "--batch-size",
+    "64"
+  ],
+  "config_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/encoder_registry.csv": "9e4417cd0cd6ce785993bdfcc8770dd8b3b88d791895c8187a0cc5561acc2ca5"
+  },
+  "data_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/fragments/main/qwen35_9b.jsonl": "86506a4722c8a8ad496cd8fadae8e842b6f1a38316c1ac9f043003a07c8fe62e"
+  },
+  "checkpoint_name": "BAAI/bge-m3",
+  "checkpoint_path": "/home/data_cpfs/zicheng/models/bge-m3",
+  "environment": {
+    "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "platform": "Linux-5.10.134-16.103.al8.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "3.0.2",
+      "pyarrow": "23.0.1",
+      "scipy": "1.17.1",
+      "torch": "2.9.1+cu129",
+      "transformers": "5.3.0",
+      "sglang": "0.5.10.post1",
+      "openai": "2.6.1",
+      "PyYAML": "6.0.1"
+    },
+    "cuda_available": true,
+    "gpus": [
+      "0, NVIDIA L20Z, 81559, 580.82.07",
+      "1, NVIDIA L20Z, 81559, 580.82.07",
+      "2, NVIDIA L20Z, 81559, 580.82.07",
+      "3, NVIDIA L20Z, 81559, 580.82.07",
+      "4, NVIDIA L20Z, 81559, 580.82.07",
+      "5, NVIDIA L20Z, 81559, 580.82.07",
+      "6, NVIDIA L20Z, 81559, 580.82.07",
+      "7, NVIDIA L20Z, 81559, 580.82.07"
+    ]
+  },
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "start_time": "2026-09-15T12:23:15.756874Z",
+  "end_time": "2026-09-15T12:23:35.722384Z",
+  "status": "success",
+  "output_paths": [
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/bge_m3/qwen35_9b.npz",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/bge_m3/qwen35_9b.metadata.json"
+  ],
+  "error": null,
+  "counts": {
+    "rows": 6720,
+    "embedding_dimension": 1024
+  }
+}

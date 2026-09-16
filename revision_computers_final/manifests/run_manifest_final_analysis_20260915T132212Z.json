@@ -1,0 +1,78 @@
+{
+  "run_id": "final_analysis_20260915T132212Z",
+  "git_commit": "e5ab4c755f4fe7b5a739554adf57bd3e98a664a4",
+  "command": [
+    "revision_computers_final/scripts/finalize_revision.py"
+  ],
+  "config_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/encoder_registry.csv": "9e4417cd0cd6ce785993bdfcc8770dd8b3b88d791895c8187a0cc5561acc2ca5",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/evaluator.yaml": "7fe2a96de98c8a0cf79c20a5cc4376800ec9c4237f22b21d3fb6a9c00aa9db31",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/failure_thresholds.yaml": "6cc93932efa6cedaf26c0f8fd11f799bd4869e1bb54b4fc72c9a6dedd0b57952",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/human_eval_scenarios.csv": "dde3bf09cb9a277245efac248bc15d2a3e47975bc6faf71de87674d48ccf0d61",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/inference_servers.yaml": "48a0f2874b381aceb88bb20efc88c442bb2e3154f944395a56f867c1a02a6a89",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/main_experiment.yaml": "5412ec323239a0b3316dfd7c4348b31a659939c4ad08218fad871963ce7d988e",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/model_registry.csv": "6f415b7deac9f82ec60f3fe6af7183f2f1dbf9a633f34ecf9f9b9aa4cb59551a",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/robustness_experiment.yaml": "e229c6e6fef12570320133042eae686208d81be41c69e54c97f6b2806c55cf9e",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/robustness_scenarios.csv": "cdcd8812b54f16f7214dd47396acb16db0be06b949df835f43edb26b873dce93",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/shared_anchor_scenarios.csv": "cb37b58078e52c9eea2a07d4ee5a308c818d0e892f78e499d1f761a8e1c5e546"
+  },
+  "data_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/qwen_family_outputs.jsonl": "345de0d693ae2f89c03bba73850f1de576ccdfc4f0c1b26a2c41176c6ed495be",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/robustness_outputs.jsonl": "d1d6567d9321466be3dc68840be677bc4125c11205225dd69252d84d35e82b9f",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/metrics/llm_evaluations.jsonl": "96db5d695347f325eaf3d60dbcfb2af663492a546951706353696cf784e02131",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/metrics/robustness_llm_evaluations.jsonl": "6bc9a7f448ea836345a6354ed346255033c891b755492c1776c6e5cc002c9b93",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/shared_anchors_final.csv": "450b9c6ebb2bb630b19f85a1d51676b398724a118729addad3d4d79bcb297a61",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/human_eval/human_results.csv": "0c5d1b7f5ff190d093d27e14514d0658db06a5191bfecd51b08dde24f4374ab4"
+  },
+  "checkpoint_name": null,
+  "checkpoint_path": null,
+  "environment": {
+    "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "platform": "Linux-5.10.134-16.103.al8.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "3.0.2",
+      "pyarrow": "23.0.1",
+      "scipy": "1.17.1",
+      "torch": "2.9.1+cu129",
+      "transformers": "5.3.0",
+      "sglang": "0.5.10.post1",
+      "openai": "2.6.1",
+      "PyYAML": "6.0.1"
+    },
+    "cuda_available": true,
+    "gpus": [
+      "0, NVIDIA L20Z, 81559, 580.82.07",
+      "1, NVIDIA L20Z, 81559, 580.82.07",
+      "2, NVIDIA L20Z, 81559, 580.82.07",
+      "3, NVIDIA L20Z, 81559, 580.82.07",
+      "4, NVIDIA L20Z, 81559, 580.82.07",
+      "5, NVIDIA L20Z, 81559, 580.82.07",
+      "6, NVIDIA L20Z, 81559, 580.82.07",
+      "7, NVIDIA L20Z, 81559, 580.82.07"
+    ]
+  },
+  "seeds": [
+    1,
+    2,
+    3,
+    20260915,
+    20260916,
+    20260917
+  ],
+  "start_time": "2026-09-15T13:22:14.495114Z",
+  "end_time": "2026-09-15T13:25:30.309983Z",
+  "status": "success",
+  "output_paths": [
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/metrics/model_level_summary.csv",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/statistics/bootstrap_results.csv",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/statistics/paired_tests.csv",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/statistics/robustness_factorial_effects.csv",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/tables",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/figures"
+  ],
+  "error": null,
+  "counts": {
+    "commands": 16
+  }
+}

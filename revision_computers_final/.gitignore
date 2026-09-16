@@ -2,16 +2,3 @@ __pycache__/
 *.pyc
 models/
 data/fragments/
-data/embeddings/
-data/qwen_family_outputs.jsonl
-data/robustness_outputs.jsonl
-logs/
-manifests/run_manifest_*.json
-metrics/fragments/
-metrics/*.parquet
-metrics/llm_evaluations.jsonl
-metrics/robustness_llm_evaluations.jsonl
-metrics/semantic_similarity/
-human_eval/human_results.csv
-figures/*.png
-figures/*.pdf

@@ -1,0 +1,72 @@
+{
+  "run_id": "embed_multilingual_e5_large_instruct_qwen35_4b_20260915T120924Z",
+  "git_commit": "2c5076dc4e82580188ac0fe50cdde7643bff4c58",
+  "command": [
+    "revision_computers_final/scripts/embed_outputs.py",
+    "--encoder-id",
+    "multilingual_e5_large_instruct",
+    "--model-id",
+    "qwen35_4b",
+    "--input",
+    "revision_computers_final/logs/pilots/qwen35_4b_prompt_preflight_20260915.jsonl",
+    "--out",
+    "revision_computers_final/logs/pilots/e5_qwen35_4b_preflight.npz",
+    "--metadata-out",
+    "revision_computers_final/logs/pilots/e5_qwen35_4b_preflight.metadata.json",
+    "--device",
+    "cuda:7",
+    "--batch-size",
+    "21"
+  ],
+  "config_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/encoder_registry.csv": "9e4417cd0cd6ce785993bdfcc8770dd8b3b88d791895c8187a0cc5561acc2ca5"
+  },
+  "data_file_hashes": {
+    "revision_computers_final/logs/pilots/qwen35_4b_prompt_preflight_20260915.jsonl": "f258b576f3707bae2fd5e8a0c32a49c96f90be2a1f7728cf5defe0f82907f685"
+  },
+  "checkpoint_name": "intfloat/multilingual-e5-large-instruct",
+  "checkpoint_path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/models/multilingual-e5-large-instruct",
+  "environment": {
+    "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "platform": "Linux-5.10.134-16.103.al8.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "3.0.2",
+      "pyarrow": "23.0.1",
+      "scipy": "1.17.1",
+      "torch": "2.9.1+cu129",
+      "transformers": "5.3.0",
+      "sglang": "0.5.10.post1",
+      "openai": "2.6.1",
+      "PyYAML": "6.0.1"
+    },
+    "cuda_available": true,
+    "gpus": [
+      "0, NVIDIA L20Z, 81559, 580.82.07",
+      "1, NVIDIA L20Z, 81559, 580.82.07",
+      "2, NVIDIA L20Z, 81559, 580.82.07",
+      "3, NVIDIA L20Z, 81559, 580.82.07",
+      "4, NVIDIA L20Z, 81559, 580.82.07",
+      "5, NVIDIA L20Z, 81559, 580.82.07",
+      "6, NVIDIA L20Z, 81559, 580.82.07",
+      "7, NVIDIA L20Z, 81559, 580.82.07"
+    ]
+  },
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "start_time": "2026-09-15T12:09:25.293855Z",
+  "end_time": "2026-09-15T12:09:30.045114Z",
+  "status": "success",
+  "output_paths": [
+    "revision_computers_final/logs/pilots/e5_qwen35_4b_preflight.npz",
+    "revision_computers_final/logs/pilots/e5_qwen35_4b_preflight.metadata.json"
+  ],
+  "error": null,
+  "counts": {
+    "rows": 21,
+    "embedding_dimension": 1024
+  }
+}

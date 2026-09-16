@@ -1,0 +1,21 @@
+{
+  "encoder_id": "text2vec_base_chinese",
+  "model_card_name": "shibing624/text2vec-base-chinese",
+  "checkpoint_path": "/home/data_cpfs/zicheng/models/text2vec-base-chinese",
+  "checkpoint_revision": "183bb99aa7af74355fb58d16edf8c13ae7c5433e",
+  "pooling": "mean",
+  "normalize": "true",
+  "max_length": "512",
+  "truncation": "longest_first",
+  "instruction_prefix": "",
+  "batch_size": "128",
+  "device_policy": "cuda",
+  "notes": "Exact legacy checkpoint and pooling",
+  "input_file": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/fragments/main/qwen36_35b_a3b.jsonl",
+  "input_sha256": "055be85b12c0335ff04caab88ca8dae9e541d8e1ba4e1087427ec46a726d4e88",
+  "row_count": 6720,
+  "embedding_dimension": 768,
+  "dtype": "float32",
+  "device": "cuda:1",
+  "actual_batch_size": 128
+}

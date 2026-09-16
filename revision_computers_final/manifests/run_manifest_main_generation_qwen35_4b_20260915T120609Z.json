@@ -1,0 +1,71 @@
+{
+  "run_id": "main_generation_qwen35_4b_20260915T120609Z",
+  "git_commit": "2c5076dc4e82580188ac0fe50cdde7643bff4c58",
+  "command": [
+    "revision_computers_final/scripts/run_main_generation.py",
+    "--model-id",
+    "qwen35_4b",
+    "--base-url",
+    "http://127.0.0.1:18101/v1",
+    "--served-model-name",
+    "qwen35_4b",
+    "--scenario-id",
+    "concision_detail_001",
+    "--concurrency",
+    "16"
+  ],
+  "config_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/main_experiment.yaml": "86e377d93f6d3d2e4597ae80f38b273f4f869cd2782d3f95160baf98b5519c8f",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/model_registry.csv": "e63d8c1395de95f1866173d6c86201af726b66a58c99f1a74c85ebef5d8ca18e"
+  },
+  "data_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/data/scenarios/styleblend_8axis_scenarios_v1.jsonl": "c6b7ba3e514eff070ab7ccd7d6a5929dc2a3ee0147db2b7eed802b859f6b16fc"
+  },
+  "checkpoint_name": "Qwen/Qwen3.5-4B",
+  "checkpoint_path": "/home/data_cpfs/zicheng/models/Qwen3.5-4B",
+  "environment": {
+    "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "platform": "Linux-5.10.134-16.103.al8.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "3.0.2",
+      "pyarrow": "23.0.1",
+      "scipy": "1.17.1",
+      "torch": "2.9.1+cu129",
+      "transformers": "5.3.0",
+      "sglang": "0.5.10.post1",
+      "openai": "2.6.1",
+      "PyYAML": "6.0.1"
+    },
+    "cuda_available": true,
+    "gpus": [
+      "0, NVIDIA L20Z, 81559, 580.82.07",
+      "1, NVIDIA L20Z, 81559, 580.82.07",
+      "2, NVIDIA L20Z, 81559, 580.82.07",
+      "3, NVIDIA L20Z, 81559, 580.82.07",
+      "4, NVIDIA L20Z, 81559, 580.82.07",
+      "5, NVIDIA L20Z, 81559, 580.82.07",
+      "6, NVIDIA L20Z, 81559, 580.82.07",
+      "7, NVIDIA L20Z, 81559, 580.82.07"
+    ]
+  },
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "start_time": "2026-09-15T12:06:10.768586Z",
+  "end_time": "2026-09-15T12:06:13.812927Z",
+  "status": "pilot_superseded",
+  "output_paths": [
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/logs/pilots/qwen35_4b_prompt_preflight_20260915.jsonl",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/logs/generation_failures_qwen35_4b.jsonl"
+  ],
+  "error": "Preflight output was archived before the main run because the P1 wording was tightened to match the legacy template exactly.",
+  "config_hash": "86e377d93f6d3d2e4597ae80f38b273f4f869cd2782d3f95160baf98b5519c8f",
+  "counts": {
+    "planned": 21,
+    "new_successes": 21,
+    "new_failures": 0
+  }
+}

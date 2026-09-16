@@ -1,0 +1,64 @@
+$ /usr/bin/python -m pytest -q /home/data_cpfs/lizihua/sbe/revision_computers_final/tests
+...........                                                              [100%]
+11 passed in 0.79s
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/audit_data.py
+{"scenario_records": 320, "generation_records": 20160, "projection_records": 40320, "human_records": 336, "sanity": "passed", "out_dir": "/home/data_cpfs/lizihua/sbe/revision_computers_final/audit"}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/consolidate_generations.py
+{"rows": 33600, "expected": 33600, "problems": [], "out": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/qwen_family_outputs.jsonl"}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/consolidate_robustness.py
+{"rows": 9600, "reused": 2400, "new": 7200, "conditions": 4, "problems": []}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/aggregate_metrics.py
+{"sample_rows": 100800, "scenario_rows": 4800, "model_encoder_pairs": 15, "bootstrap_rows": 255}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/run_ablations.py
+{"endpoint_rows": 4800, "baseline_rows": 75, "shared_anchor_status": "external_pending"}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/analyze_baselines_detailed.py
+{"scenario_rows": 25600, "summary_rows": 480, "methods": 6}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/run_statistical_analysis.py
+{"paired_rows": 60, "hypothesis_rows": 24, "scale_rows": 36}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/analyze_content_quality.py
+{"evaluations": 33600, "bootstrap_rows": 60, "semantic_encoders": 3, "human_validation": "external_pending"}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/analyze_self_anchors.py
+{"endpoint_pairs": 14400, "summary_rows": 165}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/analyze_shared_anchors.py
+{"status": "external_pending", "approved_pairs": 0}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/classify_failures.py
+{"rows": 4800, "content_status": "complete", "counts_rows": 170}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/analyze_robustness.py
+{"factorial_cells": 3200, "effect_rows": 444, "geometry_status": "external_pending"}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/analyze_human_eval.py
+{"status": "external_pending", "formal_rows_expected": 960}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/analyze_efficiency.py
+{"models": 5, "global_descriptive_pareto_models": 1, "within_group_pareto_models": 4}
+
+
+$ /usr/bin/python /home/data_cpfs/lizihua/sbe/revision_computers_final/scripts/make_tables_and_figures.py
+{"png_figures": 10, "pdf_figures": 10}
+

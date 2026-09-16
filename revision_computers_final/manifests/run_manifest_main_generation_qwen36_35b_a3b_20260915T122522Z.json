@@ -1,0 +1,71 @@
+{
+  "run_id": "main_generation_qwen36_35b_a3b_20260915T122522Z",
+  "git_commit": "e5ab4c755f4fe7b5a739554adf57bd3e98a664a4",
+  "command": [
+    "revision_computers_final/scripts/run_main_generation.py",
+    "--model-id",
+    "qwen36_35b_a3b",
+    "--base-url",
+    "http://127.0.0.1:18105/v1",
+    "--served-model-name",
+    "qwen36_35b_a3b",
+    "--scenario-id",
+    "concision_detail_001",
+    "--concurrency",
+    "16"
+  ],
+  "config_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/main_experiment.yaml": "5412ec323239a0b3316dfd7c4348b31a659939c4ad08218fad871963ce7d988e",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/model_registry.csv": "6f415b7deac9f82ec60f3fe6af7183f2f1dbf9a633f34ecf9f9b9aa4cb59551a"
+  },
+  "data_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/data/scenarios/styleblend_8axis_scenarios_v1.jsonl": "c6b7ba3e514eff070ab7ccd7d6a5929dc2a3ee0147db2b7eed802b859f6b16fc"
+  },
+  "checkpoint_name": "Qwen/Qwen3.6-35B-A3B",
+  "checkpoint_path": "/home/data_cpfs/zicheng/models/Qwen3.6-35B-A3B",
+  "environment": {
+    "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "platform": "Linux-5.10.134-16.103.al8.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "3.0.2",
+      "pyarrow": "23.0.1",
+      "scipy": "1.17.1",
+      "torch": "2.9.1+cu129",
+      "transformers": "5.3.0",
+      "sglang": "0.5.10.post1",
+      "openai": "2.6.1",
+      "PyYAML": "6.0.1"
+    },
+    "cuda_available": true,
+    "gpus": [
+      "0, NVIDIA L20Z, 81559, 580.82.07",
+      "1, NVIDIA L20Z, 81559, 580.82.07",
+      "2, NVIDIA L20Z, 81559, 580.82.07",
+      "3, NVIDIA L20Z, 81559, 580.82.07",
+      "4, NVIDIA L20Z, 81559, 580.82.07",
+      "5, NVIDIA L20Z, 81559, 580.82.07",
+      "6, NVIDIA L20Z, 81559, 580.82.07",
+      "7, NVIDIA L20Z, 81559, 580.82.07"
+    ]
+  },
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "start_time": "2026-09-15T12:25:24.376837Z",
+  "end_time": "2026-09-15T12:25:28.157073Z",
+  "status": "success",
+  "output_paths": [
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/fragments/main/qwen36_35b_a3b.jsonl",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/logs/generation_failures_qwen36_35b_a3b.jsonl"
+  ],
+  "error": null,
+  "config_hash": "5412ec323239a0b3316dfd7c4348b31a659939c4ad08218fad871963ce7d988e",
+  "counts": {
+    "planned": 21,
+    "new_successes": 21,
+    "new_failures": 0
+  }
+}

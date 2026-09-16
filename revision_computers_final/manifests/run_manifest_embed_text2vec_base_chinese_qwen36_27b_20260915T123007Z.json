@@ -1,0 +1,66 @@
+{
+  "run_id": "embed_text2vec_base_chinese_qwen36_27b_20260915T123007Z",
+  "git_commit": "e5ab4c755f4fe7b5a739554adf57bd3e98a664a4",
+  "command": [
+    "revision_computers_final/scripts/embed_outputs.py",
+    "--encoder-id",
+    "text2vec_base_chinese",
+    "--model-id",
+    "qwen36_27b",
+    "--device",
+    "cuda:1",
+    "--batch-size",
+    "128"
+  ],
+  "config_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/encoder_registry.csv": "9e4417cd0cd6ce785993bdfcc8770dd8b3b88d791895c8187a0cc5561acc2ca5"
+  },
+  "data_file_hashes": {
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/fragments/main/qwen36_27b.jsonl": "ef77e07cb3d5c6cc1b1074443eaf3e8bda91aff199eec9a9809a16b4954f671b"
+  },
+  "checkpoint_name": "shibing624/text2vec-base-chinese",
+  "checkpoint_path": "/home/data_cpfs/zicheng/models/text2vec-base-chinese",
+  "environment": {
+    "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "platform": "Linux-5.10.134-16.103.al8.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "3.0.2",
+      "pyarrow": "23.0.1",
+      "scipy": "1.17.1",
+      "torch": "2.9.1+cu129",
+      "transformers": "5.3.0",
+      "sglang": "0.5.10.post1",
+      "openai": "2.6.1",
+      "PyYAML": "6.0.1"
+    },
+    "cuda_available": true,
+    "gpus": [
+      "0, NVIDIA L20Z, 81559, 580.82.07",
+      "1, NVIDIA L20Z, 81559, 580.82.07",
+      "2, NVIDIA L20Z, 81559, 580.82.07",
+      "3, NVIDIA L20Z, 81559, 580.82.07",
+      "4, NVIDIA L20Z, 81559, 580.82.07",
+      "5, NVIDIA L20Z, 81559, 580.82.07",
+      "6, NVIDIA L20Z, 81559, 580.82.07",
+      "7, NVIDIA L20Z, 81559, 580.82.07"
+    ]
+  },
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "start_time": "2026-09-15T12:30:08.414269Z",
+  "end_time": "2026-09-15T12:30:20.433505Z",
+  "status": "success",
+  "output_paths": [
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/text2vec_base_chinese/qwen36_27b.npz",
+    "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/text2vec_base_chinese/qwen36_27b.metadata.json"
+  ],
+  "error": null,
+  "counts": {
+    "rows": 6720,
+    "embedding_dimension": 768
+  }
+}
