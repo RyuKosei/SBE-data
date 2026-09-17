@@ -144,7 +144,12 @@ def pca_trajectory() -> None:
         ax.annotate("", points[index + 1], points[index], arrowprops={"arrowstyle": "->", "color": "#888888", "lw": 1.2})
     scatter = ax.scatter(points[:, 0], points[:, 1], c=ratios, cmap="viridis", s=75, edgecolor="white", linewidth=0.7, zorder=3)
     for point, ratio in zip(points, ratios):
-        ax.annotate(f"α={ratio:.2f}", point, xytext=(5, 4), textcoords="offset points", fontsize=8)
+        # Place the rightmost internal-ratio label to the left so that the
+        # complete value remains visible beside the color bar.
+        if ratio >= 2 / 3 - 1e-9 and point[0] == points[:, 0].max():
+            ax.annotate(f"α={ratio:.2f}", point, xytext=(-5, 4), textcoords="offset points", fontsize=8, ha="right")
+        else:
+            ax.annotate(f"α={ratio:.2f}", point, xytext=(5, 4), textcoords="offset points", fontsize=8)
     fig.colorbar(scatter, ax=ax, label="Target ratio α")
     ax.set_xlabel("Trajectory PC1"); ax.set_ylabel("Trajectory PC2")
     ax.set_title(f"Representative seven-point trajectory\n{target.scenario_id}, Qwen3.5-9B, BGE-M3")

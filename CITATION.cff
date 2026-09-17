@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use StyleBlend-Bench, please cite this repository and the associated paper."
+title: "StyleBlend-Bench Reproducibility Package"
+type: software
+authors:
+  - family-names: Liu
+    given-names: Zicheng
+  - family-names: Tian
+    given-names: Yuan
+  - family-names: Shao
+    given-names: Xiaowei
+  - family-names: Zhang
+    given-names: Dexin
+version: 1.0.0
+date-released: 2026-09-17
+repository-code: "https://github.com/RyuKosei/SBE-data"
+url: "https://github.com/RyuKosei/SBE-data"
+keywords:
+  - controllable text generation
+  - style control
+  - language models
+  - sentence embeddings
+  - calibration
+
