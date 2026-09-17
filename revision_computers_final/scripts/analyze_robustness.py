@@ -1,4 +1,4 @@
-"""Analyze the preregistered 2x2 prompt/temperature robustness experiment."""
+"""Analyze the prespecified 2x2 prompt/temperature robustness experiment."""
 
 from __future__ import annotations
 

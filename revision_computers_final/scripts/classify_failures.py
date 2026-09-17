@@ -1,4 +1,4 @@
-"""Apply the preregistered failure taxonomy after thresholds were frozen."""
+"""Apply the prespecified failure taxonomy after thresholds were frozen."""
 
 from __future__ import annotations
 
@@ -199,7 +199,7 @@ def main() -> None:
             "",
             "## Unexpected negative finding",
             "",
-            f"The most prevalent preregistered flag was `{unexpected.failure_type}` ({unexpected.proportion:.1%} of scenario-model-encoder cells). This prevents interpreting a favorable average ICE as evidence that trajectories are generally clean or one-dimensional.",
+            f"The most prevalent prespecified flag was `{unexpected.failure_type}` ({unexpected.proportion:.1%} of scenario-model-encoder cells). This prevents interpreting a favorable average ICE as evidence that trajectories are generally clean or one-dimensional.",
             "",
             "Representative positive and negative cases, including the midpoint text, are stored in `cases/failure_cases.csv`.",
         ]

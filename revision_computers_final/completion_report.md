@@ -35,7 +35,7 @@ Consequently, absolute self-versus-shared ranking results, shared-anchor prompt/
 | Qwen scale/version/architecture analysis | Complete, descriptive | Five models; Qwen3.5 and Qwen3.6 distinguished; causal inference prohibited | `statistics/scale_version_architecture.csv` |
 | Efficiency and Pareto analysis | Complete | Five generation runs; direct timing comparison limited to three matched TP2/concurrency-32 runs | `metrics/inference_efficiency.csv`, `statistics/efficiency_pareto.csv` |
 | Bootstrap, paired tests, hypotheses | Complete | 10,000 scenario-level resamples; 60 paired-test rows; Holm adjustment | `statistics/bootstrap_results.csv`, `statistics/paired_tests.csv`, `statistics/hypothesis_tests.csv` |
-| Mixed-effects model | Attempted; singular, fallback complete | Both preregistered MixedLM outcomes were singular; scenario-clustered robust OLS retained | `statistics/mixed_effects_results.txt` |
+| Mixed-effects model | Attempted; singular, fallback complete | Both prespecified MixedLM outcomes were singular; scenario-clustered robust OLS retained | `statistics/mixed_effects_results.txt` |
 | Failure taxonomy | Complete | 4,800 scenario/model/encoder classifications, all ten fixed types | `metrics/failure_classifications.parquet`, `cases/failure_cases.csv` |
 | Main tables and figures | Complete with explicit pending panels | Ten 300-dpi PNG files and ten vector PDFs | `tables/`, `figures/` |
 | English manuscript insertions | Complete with only external-result placeholders | Required section structure present | `manuscript_insertions_en.md` |

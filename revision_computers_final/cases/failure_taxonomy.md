@@ -18,6 +18,6 @@ Content-style entanglement status: **complete**.
 
 ## Unexpected negative finding
 
-The most prevalent preregistered flag was `late_under_response` (58.7% of scenario-model-encoder cells). This prevents interpreting a favorable average ICE as evidence that trajectories are generally clean or one-dimensional.
+The most prevalent prespecified flag was `late_under_response` (58.7% of scenario-model-encoder cells). This prevents interpreting a favorable average ICE as evidence that trajectories are generally clean or one-dimensional.
 
 Representative positive and negative cases, including the midpoint text, are stored in `cases/failure_cases.csv`.

@@ -131,7 +131,7 @@ def hypothesis_tests(scenario: pd.DataFrame, iterations: int, seed: int) -> tupl
     records: list[dict[str, object]] = []
     for encoder, frame in scenario.groupby("encoder_id", sort=True):
         # Endpoint errors are exactly zero by coordinate construction, so 7-point
-        # MAE is 5/7 of the endpoint-free value for every complete trajectory.
+        # MAE is 5/7 of the interior-only value for every complete trajectory.
         for model_id, model_frame in frame.groupby("model_id", sort=True):
             h1_difference = model_frame["interior_calibration_error"] - (5.0 / 7.0) * model_frame["interior_calibration_error"]
             h1_frame = model_frame[["style_axis"]].copy()
@@ -172,9 +172,9 @@ def hypothesis_tests(scenario: pd.DataFrame, iterations: int, seed: int) -> tupl
                     "note": "Scenario-level, style-axis-stratified bootstrap.",
                 }
             )
-    text = """# Preregistered hypothesis status
+    text = """# Prespecified hypothesis status
 
-- H1 is evaluated from the paired endpoint-included and endpoint-excluded definitions. Because endpoint projection errors are mechanically zero, the complete seven-point ICE is exactly five sevenths of endpoint-free ICE.
+- H1 is evaluated from the paired endpoint-included and endpoint-excluded definitions. Because endpoint projection errors are mechanically zero, the complete seven-point ICE is exactly five sevenths of interior-only ICE.
 - H2 and H5 are evaluated below with scenario-level, style-axis-stratified bootstrap confidence intervals.
 - H3 (self versus shared-anchor ranking changes) is **external pending** until the two-author shared endpoint review is complete.
 - H4 is treated as a non-monotonicity/descriptive claim rather than a universal scaling-law test; only five models are available, and architecture is confounded with scale.

@@ -85,7 +85,7 @@ independent unit while preserving style axis as a stratum. Paired comparisons
 use the same scenarios and apply Holm correction to families of tests.
 
 The prescribed three seeds are retained for main generation, leave-one-seed-out
-trajectory construction, and the preregistered prompt/temperature experiment.
+trajectory construction, and the prespecified prompt/temperature experiment.
 No additional seed sweep is applied to encoders, deterministic baselines,
 shared-anchor projection, content checking, or downstream statistical models.
 

@@ -250,7 +250,7 @@ def failure_figure() -> None:
     ax.barh(frame.failure_type.str.replace("_", " "), frame.proportion, color=COLORS[0])
     ax.set_xlabel("Proportion of scenario-model-encoder cells")
     ax.set_xlim(0, min(1, frame.proportion.max() * 1.15))
-    ax.set_title("Preregistered control failure taxonomy")
+    ax.set_title("Prespecified control failure taxonomy")
     for index, value in enumerate(frame.proportion):
         ax.text(value, index, f" {value:.1%}", va="center", fontsize=8)
     save(fig, "fig09_failure_taxonomy")

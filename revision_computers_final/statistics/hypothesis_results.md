@@ -1,6 +1,6 @@
-# Preregistered hypothesis status
+# Prespecified hypothesis status
 
-- H1 is evaluated from the paired endpoint-included and endpoint-excluded definitions. Because endpoint projection errors are mechanically zero, the complete seven-point ICE is exactly five sevenths of endpoint-free ICE.
+- H1 is evaluated from the paired endpoint-included and endpoint-excluded definitions. Because endpoint projection errors are mechanically zero, the complete seven-point ICE is exactly five sevenths of interior-only ICE.
 - H2 and H5 are evaluated below with scenario-level, style-axis-stratified bootstrap confidence intervals.
 - H3 (self versus shared-anchor ranking changes) is **external pending** until the two-author shared endpoint review is complete.
 - H4 is treated as a non-monotonicity/descriptive claim rather than a universal scaling-law test; only five models are available, and architecture is confounded with scale.

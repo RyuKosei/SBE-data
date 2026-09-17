@@ -1,6 +1,6 @@
 # Minimal reproducibility package
 
-This package reproduces the endpoint-free metric sanity checks without copying restricted checkpoints or the full generated corpus. The full cluster run is controlled by the configurations in `config/`; frozen copies are included here.
+This package reproduces the self-anchored, interior-only metric sanity checks without copying restricted checkpoints or the full generated corpus. The full cluster run is controlled by the configurations in `config/`; frozen copies are included here.
 
 Run:
 
