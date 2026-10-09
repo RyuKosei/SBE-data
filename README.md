@@ -2,6 +2,30 @@
 
 StyleBlend-Bench is a Chinese benchmark and reproducibility package for evaluating continuous style-ratio control in black-box language models. The accompanying study uses model-specific endpoint anchors, excludes the two mechanically perfect endpoints from primary errors, and reports calibration, off-axis drift, trajectory geometry, content diagnostics, robustness, and serving efficiency for five Qwen3.5 and Qwen3.6 checkpoints.
 
+## Computers major revision R1
+
+The completed major-revision package is under
+[`revision_computers_major_r1/`](revision_computers_major_r1/). It adds a
+sixth non-Qwen generator, a second automatic judge, frozen external and pooled
+reference anchors, three-encoder anchor sensitivity, and the full 320-scene
+prompt-by-temperature experiment. The package accounts for all 112,320
+planned generation identities: 112,313 usable outputs and seven explicit
+generation failures, without imputation.
+
+Start with:
+
+- [`revision_results.md`](revision_computers_major_r1/reports/revision_results.md)
+  for verified numerical results and scope limits;
+- [`reviewer_response_evidence.md`](revision_computers_major_r1/reports/reviewer_response_evidence.md)
+  for the reviewer-evidence map and paste-ready English text;
+- [`completion_report.md`](revision_computers_major_r1/reports/completion_report.md)
+  for counts, costs, validation status, and reproduction entry points;
+- [`publication_notes.md`](revision_computers_major_r1/reports/publication_notes.md)
+  for API/model disclosure and release caveats.
+
+Large JSONL, embedding, and Parquet artifacts are stored with Git LFS. Clone
+with Git LFS enabled to retrieve the full data rather than pointer files.
+
 ## Paper experiment package
 
 The final package for the *Computers* submission is under [`revision_computers_final/`](revision_computers_final/). It contains:

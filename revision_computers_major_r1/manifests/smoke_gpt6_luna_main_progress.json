@@ -1,0 +1,20 @@
+{
+  "updated_at": "2026-10-09T13:12:25.049180Z",
+  "planned": 6720,
+  "existing_at_start": 0,
+  "attempted_this_run": 20,
+  "successes_this_run": 20,
+  "content_failures_this_run": 0,
+  "transport_failures_this_run": 0,
+  "usage": {
+    "input_tokens": 5002,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 0,
+    "output_tokens": 2084,
+    "reasoning_tokens": 0,
+    "total_tokens": 7086
+  },
+  "estimated_cost_usd": 0.0015422,
+  "budget_usd": 0.1,
+  "account_balance_available": false
+}

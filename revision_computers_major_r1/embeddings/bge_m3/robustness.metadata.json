@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-10-09T12:16:43.358391Z",
+  "encoder": {
+    "encoder_id": "bge_m3",
+    "model_card_name": "BAAI/bge-m3",
+    "checkpoint_path": "/home/data_cpfs/zicheng/models/bge-m3",
+    "checkpoint_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "pooling": "cls",
+    "normalize": "true",
+    "max_length": "512",
+    "truncation": "longest_first",
+    "instruction_prefix": "",
+    "batch_size": "64",
+    "device_policy": "cuda",
+    "notes": "Exact legacy checkpoint and pooling"
+  },
+  "input": "revision_computers_major_r1/data/robustness_outputs.jsonl",
+  "input_sha256": "74d890473172b9620f948ca2ddf8044675e314aed0016fc87762ddc4fd7de5cb",
+  "id_field": "run_id",
+  "text_field": "generated_text",
+  "rows": 95994,
+  "shape": [
+    95994,
+    1024
+  ],
+  "dtype": "float32",
+  "device": "cuda:0",
+  "batch_size": 64,
+  "chunk_size": 5000
+}

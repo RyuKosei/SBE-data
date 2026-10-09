@@ -1,0 +1,104 @@
+{
+  "generated_at": "2026-10-09T14:32:11.985250Z",
+  "gpt_model": "gpt-6-sol",
+  "gpt_snapshot_frozen": false,
+  "price_per_million_tokens_usd": {
+    "input": 2.0,
+    "cached_input": 0.2,
+    "output": 10.0
+  },
+  "stages": {
+    "fixed_references": {
+      "path": "revision_computers_major_r1/data/gpt_fixed_references.jsonl",
+      "records": 640,
+      "successful_records": 640,
+      "non_success_records": 0,
+      "usage": {
+        "input_tokens": 151586,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 54034,
+        "reasoning_tokens": 0,
+        "total_tokens": 205620
+      },
+      "estimated_cost_usd": 0.843512
+    },
+    "main_judge": {
+      "path": "revision_computers_major_r1/metrics/gpt_judge_evaluations.jsonl",
+      "records": 112313,
+      "successful_records": 112313,
+      "non_success_records": 0,
+      "usage": {
+        "input_tokens": 57688538,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 6643665,
+        "reasoning_tokens": 0,
+        "total_tokens": 64332203
+      },
+      "estimated_cost_usd": 181.813726
+    },
+    "stability_retest": {
+      "path": "revision_computers_major_r1/metrics/gpt_stability_retest.jsonl",
+      "records": 240,
+      "successful_records": 240,
+      "non_success_records": 0,
+      "usage": {
+        "input_tokens": 124150,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 14199,
+        "reasoning_tokens": 0,
+        "total_tokens": 138349
+      },
+      "estimated_cost_usd": 0.39029
+    }
+  },
+  "external_generation": {
+    "model": "gpt-6-luna",
+    "snapshot_frozen": false,
+    "price_per_million_tokens_usd": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "path": "revision_computers_major_r1/data/external_main_outputs.jsonl",
+    "records": 6720,
+    "successful_records": 6719,
+    "non_success_records": 1,
+    "usage": {
+      "input_tokens": 1783326,
+      "cached_input_tokens": 0,
+      "cache_write_tokens": 0,
+      "output_tokens": 597233,
+      "reasoning_tokens": 0,
+      "total_tokens": 2380559
+    },
+    "estimated_cost_usd": 0.47694909999999996
+  },
+  "selection_pilot_estimated_cost_usd": 0.130512,
+  "external_generation_smoke_estimated_cost_usd": 0.0015422,
+  "unrecorded_candidate_pilot_exact_cost_usd": null,
+  "conservative_unrecorded_candidate_pilot_allowance_usd": 0.1,
+  "gpt_total_estimated_cost_usd": 183.6565313,
+  "possible_unrecorded_restart_inflight_cost_allowance_usd": 0.18130703758247044,
+  "gpt_conservative_total_with_allowances_usd": 183.93783833758246,
+  "gpt_conservative_total_with_restart_allowance_usd": 183.93783833758246,
+  "cost_interpretation": "Response-derived estimate, not a relay invoice; the conservative total adds one full in-flight concurrency window for each deliberate judge-process restart and a USD 0.10 allowance for two inexpensive comparison-model pilot batches whose raw usage was not retained.",
+  "operational_gpt_hard_cap_usd": 240.0,
+  "estimated_headroom_usd": 56.34346869999999,
+  "conservative_estimated_headroom_usd": 56.06216166241754,
+  "author_stated_ceiling_usd": 300.0,
+  "hard_cap_exceeded": false,
+  "account_balance_available": false,
+  "account_balance_note": "The internal relay returned token usage but no wallet/quota balance endpoint or headers in the tested responses.",
+  "deepseek_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "deepseek_cost_usd": null,
+  "deepseek_cost_note": "No internal DeepSeek price or billable response was available; do not impute a dollar cost.",
+  "credential_exact_match_scan_performed": true,
+  "credential_exact_match_hits": []
+}

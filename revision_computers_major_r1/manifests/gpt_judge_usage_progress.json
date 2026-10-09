@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-10-09T14:30:37.485646Z",
+  "model": "gpt-6-sol",
+  "input_items": 112313,
+  "existing_at_start": 65511,
+  "attempted_this_run": 46802,
+  "successes_this_run": 46802,
+  "failures_this_run": 0,
+  "usage": {
+    "input_tokens": 57688538,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 0,
+    "output_tokens": 6643665,
+    "reasoning_tokens": 0,
+    "total_tokens": 64332203
+  },
+  "estimated_cost_usd": 181.813726,
+  "budget_usd": 239.0,
+  "account_balance_available": false,
+  "account_balance_note": "No balance or quota headers were returned by the tested relay Responses endpoint."
+}

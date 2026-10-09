@@ -1,0 +1,30 @@
+# Reviewer-response evidence map
+
+This map follows the task-summary labels supplied for the revision; the formal response letter must quote and answer the actual submission-system wording. No manuscript page or line numbers are invented here.
+
+| Concern | Evidence | English response point |
+|---|---|---|
+| R1/R2: interpretation strength and stronger reference validation | `tables/table_independent_judge.csv`; `tables/table_reference_quality.csv`; `statistics/geometry_judge_association_summary.csv` | We added a second automatic evaluator and a frozen independently generated reference pair for every scene. We describe both as operational automatic diagnostics, not human validation; the GPT reference/judge role overlap is disclosed. |
+| R1/R2: model-specific self coordinates | `tables/table_cross_family_main.csv`; `tables/table_anchor_encoder_sensitivity.csv`; `statistics/anchor_protocol_rank_sensitivity.csv` | We now contrast self anchors, fixed external text anchors, and fixed pooled-Qwen vector anchors across all frozen encoders. Ranking changes are reported as different measurement questions rather than treated as errors. |
+| R1: eight-axis rationale and boundary | `reports/benchmark_construction_facts.md` | We document the recorded axis definitions, task/domain coverage, atomic checks, length ranges, curation rules, and unrecorded provenance. The axes cover selected everyday Chinese short-text styles rather than all styles. |
+| R1/R2: Qwen-only evidence | `tables/table_cross_family_main.csv`; `manifests/external_generator_selection.json` | We attempted all 6,720 prespecified GPT-6-Luna request identities as the sixth, non-Qwen generator; 6719 yielded usable text, and the non-usable count is 1, with status retained. GPT-6-Luna is distinct from the GPT-6-Sol judge but belongs to the same GPT family/provider, which is disclosed; the local Qwen judge provides the cross-family evaluator view. |
+| R3: possible same-family judge sensitivity | `tables/table_independent_judge.csv`; `statistics/dual_judge_intensity_agreement.csv`; `statistics/dual_judge_content_confusion.csv`; `statistics/dual_judge_model_condition_differences.csv` | The same outputs are scored blind by Qwen and GPT; we report absolute agreement, stratified/residual agreement, content confusion, and model-conditional differences without interpreting them as a causal measurement of self-bias. |
+| R3: 28.57% | `reports/metric_estimator_audit.md`; `tests/test_metric_audit.py` | The 2/7 reduction is an algebraic weighting identity for complete equally weighted self-anchored seven-point trajectories, not a new empirical finding. |
+| R3: 40-scene interaction evidence | `tables/table_robustness_full.csv`; `tables/table_robustness_axis_effects.csv`; `figures/figure_robustness_effects_ci.pdf` | The 2×2 prompt-by-temperature design now covers all 320 scenes and all five original Qwen models; effects are scenario-matched with clustered CIs. |
+| R3: Figure 7 comparability | `tables/table_efficiency_matched_local.csv`; `tables/table_efficiency_all_deployments_descriptive.csv`; `figures/figure_efficiency_matched_local.pdf` | The comparative figure is restricted to the three runs with the same two-GPU/TP/concurrency configuration; other local deployments and API observations are descriptive only. |
+
+Suggested methods sentence: “For uncertainty estimation, the independent unit was `scenario_id`; all conditions belonging to a sampled scenario were retained together in an axis-stratified 10,000-replicate cluster bootstrap (seed 20260916). Primary tests were limited to BGE-M3 external-reference ICE and judge-specific style MAE, with prespecified Holm families.”
+
+Suggested limitation sentence: “All references and ratings are model-generated automatic measurements on Chinese short texts; they neither constitute human perceptual validation nor establish language-independent or absolute style ground truth.”
+
+## Paste-ready English response paragraphs
+
+**External generator and scope.** “We added GPT-6-Luna as a sixth, non-Qwen generator and attempted all 6,720 prespecified requests over 320 scenarios, seven ratios, and three independent API replicates. 6,719 responses were usable; the non-usable count is 1, with status retained, and no score- or quality-dependent regeneration was performed. GPT-6-Luna and the GPT-6-Sol evaluator are distinct model aliases but share a GPT-family provider route, so we disclose this limitation and use the local Qwen evaluator as the cross-family judge comparison.”
+
+**Fixed reference protocol.** “For every scenario, GPT-6-Sol generated one A endpoint and one B endpoint once, after which the 640 texts and their hashes were frozen and shared across all generators, replicates, conditions, and encoders. Qwen automatic screening produced valid records for 639/640 texts; both endpoints passed the content rule in 317/320 scenarios. These checks are automatic diagnostics, not human certification, and the reference-generator/evaluator role overlap is explicitly disclosed.”
+
+**Anchor sensitivity.** “Under BGE-M3, the six-model ordering by mean internal ICE had Spearman correlation 1.000 between self anchors and fixed external text anchors, with 0/15 pairwise order changes. We do not require protocol-invariant rankings: self anchoring measures calibration relative to each model's own endpoints, whereas fixed anchors measure calibration in a shared operational coordinate system.”
+
+**Independent automatic judge.** “Across matched outputs, the Qwen/GPT intensity association was Pearson r=0.910 and Spearman rho=0.870; after demeaning within alpha-by-axis strata it was r=0.862 and rho=0.820. Content-pass agreement was 76.2% with Cohen's kappa=0.078. We treat these as evaluator-sensitivity diagnostics rather than human validation or a causal test of same-family bias.”
+
+**Missingness.** “The deduplicated judge index contains 112,313 usable outputs. Seven planned identities—six local robustness generations and one external generation—are retained as explicit generation failures and are never imputed as passes or zero error; all 112,320 planned identities are therefore accounted for.”

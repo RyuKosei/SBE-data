@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-09T12:04:44.144804Z",
+  "source": "revision_computers_final/metrics/inference_efficiency.csv",
+  "matched_group": "L20Z_TP2_BF16_concurrency32",
+  "matched_models": [
+    "qwen36_27b",
+    "qwen35_35b_a3b",
+    "qwen36_35b_a3b"
+  ],
+  "excluded_from_comparative_figure": [
+    "qwen35_4b",
+    "qwen35_9b"
+  ],
+  "api_models_in_local_figure": false,
+  "benchmark_rerun": false
+}

@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-10-09T12:12:14.638668Z",
+  "expected_records": 96000,
+  "valid_output_records": 95994,
+  "missing_records": 6,
+  "missing_with_recorded_failure": 6,
+  "condition_status_counts": {
+    "ok": 95994,
+    "empty_content": 6
+  },
+  "duplicate_ids": 0,
+  "by_model": {
+    "qwen35_35b_a3b": 19200,
+    "qwen35_4b": 19200,
+    "qwen35_9b": 19200,
+    "qwen36_27b": 19194,
+    "qwen36_35b_a3b": 19200
+  },
+  "by_condition": {
+    "p1_high": 24000,
+    "p1_low": 23996,
+    "p2_high": 23999,
+    "p2_low": 23999
+  },
+  "by_source": {
+    "legacy_main_reuse": 24000,
+    "major_r1_generation": 64794,
+    "legacy_robustness_reuse": 7200
+  },
+  "missing_preview": [
+    "major_r1_robust_163a6644ca61541c53541ea0",
+    "major_r1_robust_23bcf26439d55f5f5c1e7f0a",
+    "major_r1_robust_3e6c73a936bb585ce446d6d4",
+    "major_r1_robust_66f479104c5960ffd10daf22",
+    "major_r1_robust_7f8e382275229c4d206872e4",
+    "major_r1_robust_c6c42fa91038fe6ebb54e0ad"
+  ]
+}

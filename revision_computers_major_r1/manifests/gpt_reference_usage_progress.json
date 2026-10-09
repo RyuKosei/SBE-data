@@ -1,0 +1,18 @@
+{
+  "updated_at": "2026-10-09T12:01:12.834868Z",
+  "model": "gpt-6-sol",
+  "planned": 640,
+  "completed_total": 640,
+  "failures_this_run": 0,
+  "usage": {
+    "input_tokens": 151586,
+    "cached_input_tokens": 0,
+    "cache_write_tokens": 0,
+    "output_tokens": 54034,
+    "reasoning_tokens": 0,
+    "total_tokens": 205620
+  },
+  "estimated_cost_usd": 0.843512,
+  "budget_usd": 10.0,
+  "account_balance_available": false
+}

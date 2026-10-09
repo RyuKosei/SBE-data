@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-10-09T14:32:00.569175Z",
+  "scenario_rows": 17280,
+  "summary_rows": 54,
+  "models": [
+    "gpt6_luna_api",
+    "qwen35_35b_a3b",
+    "qwen35_4b",
+    "qwen35_9b",
+    "qwen36_27b",
+    "qwen36_35b_a3b"
+  ],
+  "encoders": [
+    "bge_m3",
+    "multilingual_e5_large_instruct",
+    "text2vec_base_chinese"
+  ],
+  "protocols": [
+    "external_fixed_reference",
+    "fixed_pooled_qwen",
+    "self_anchored"
+  ],
+  "bootstrap_iterations": 10000,
+  "bootstrap_seed": 20260916,
+  "permutation_iterations": 100000,
+  "holm_family_definition": "all model comparisons of one fixed encoder × metric × protocol-vs-self contrast"
+}

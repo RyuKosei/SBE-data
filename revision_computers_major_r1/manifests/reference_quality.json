@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-10-09T13:52:17.714137Z",
+  "reference_rows": 640,
+  "scenario_pairs": 320,
+  "qwen_judge_valid": 639,
+  "auto_generated": true,
+  "auto_screened": false,
+  "human_verified": false,
+  "approval_status": null
+}

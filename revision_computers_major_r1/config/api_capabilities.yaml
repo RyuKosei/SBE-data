@@ -1,0 +1,95 @@
+recorded_date: 2026-10-09
+scope: internal Alibaba relay routes supplied by the author
+
+external_generator:
+  provider: alibaba_internal_relay
+  base_url: https://iai.alibaba-inc.com/relay/v1
+  api_surface: Responses API
+  requested_model: gpt-6-luna
+  fixed_snapshot: false
+  tested_capabilities:
+    plain_text: supported
+    reasoning_effort_none: supported
+    temperature_0_7: supported
+    usage_tokens: returned
+    response_model: returned_as_gpt-6-luna
+  locked_parameters:
+    reasoning_effort: none
+    temperature: 0.7
+    max_output_tokens: 256
+    seed: omitted
+    replicate_ids: [1, 2, 3]
+    outer_transport_attempts: 3
+    sdk_automatic_retries: 0
+  independence_limitation: >-
+    The external generator and gpt-6-sol judge are different models but the
+    same GPT family/provider. The local Qwen judge is the cross-family judge.
+
+gpt:
+  provider: alibaba_internal_relay
+  base_url: https://iai.alibaba-inc.com/relay/v1
+  api_surface: Responses API
+  requested_model: gpt-6-sol
+  fixed_snapshot: false
+  tested_capabilities:
+    plain_text: supported
+    strict_json_schema: supported
+    reasoning_effort_none: supported
+    temperature_zero: not sent
+    usage_tokens: returned
+    response_model: returned
+    account_balance_or_quota_remaining: not returned
+  locked_parameters:
+    reasoning_effort: none
+    temperature: omitted
+    judge_max_output_tokens: 512
+    reference_max_output_tokens: 256
+    outer_transport_attempts: 3
+    sdk_automatic_retries: 0
+    judge_request_timeout_seconds: 90
+  deviation_from_initial_revision_brief: >-
+    The originally named fixed GPT-5.4 snapshot was not exposed by the internal
+    route during capability tests. gpt-6-sol was selected before formal runs
+    after an 80-output locked-rubric pilot. The relay alias is not described as
+    a frozen public checkpoint.
+
+deepseek:
+  selected_for_formal_run: false
+  status: superseded_after_pre_inference_relay_blocker
+  provider: alibaba_internal_dashscope_relay
+  base_url: https://cn-iai.alibaba-inc.com/dashscope
+  api_surface: Chat Completions
+  requested_model: deepseek-r1
+  fixed_snapshot: false
+  tested_capabilities:
+    account_access: blocked_by_internal_quota_exchange_rate_configuration
+    successful_billable_response: false
+    usage_tokens: zero
+    account_balance_or_quota_remaining: not_returned
+  locked_parameters_if_unblocked:
+    temperature: 0.7
+    top_p: omitted
+    max_tokens: 256
+    seed: omitted
+    replicate_ids: [1, 2, 3]
+    tools: disabled
+    response_content: final_content_only
+    reasoning_content_persisted: false
+    outer_transport_attempts: 3
+    sdk_automatic_retries: 0
+    request_timeout_seconds: 180
+  deviation_from_initial_revision_brief: >-
+    The author-supplied internal service lists deepseek-r1 rather than the
+    initially proposed deepseek-v4-pro. This operational substitution was
+    initially authorized for testing, but both tested DeepSeek aliases were
+    blocked before inference. The author subsequently authorized gpt-6-luna
+    as the locked formal external generator. The retained DeepSeek script does
+    not claim non-thinking parity, a frozen snapshot, or identical sampling to
+    local Qwen.
+  alternate_alias_probe:
+    requested_model: deepseek-v4-pro-0813
+    successful_response: false
+    failure: missing_exchange_rate_from_null_to_CNY
+    interpretation: >-
+      The relay rejected the request in quota configuration before model
+      routing, so availability and permissions for this alias remain unproven.

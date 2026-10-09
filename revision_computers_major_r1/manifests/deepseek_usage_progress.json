@@ -1,0 +1,16 @@
+{
+  "updated_at": "2026-10-09T12:45:06.694075Z",
+  "planned": 6720,
+  "existing_at_start": 0,
+  "attempted_this_run": 1,
+  "successes_this_run": 0,
+  "content_failures_this_run": 0,
+  "transport_failures_this_run": 1,
+  "usage_this_run": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "account_balance_available": false,
+  "account_balance_note": "The tested relay API did not expose a balance endpoint or quota headers."
+}

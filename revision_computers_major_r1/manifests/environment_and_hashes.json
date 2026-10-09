@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-10-09T15:55:38.804081Z",
+  "project_root": "/home/data_cpfs/lizihua/sbe",
+  "output_root": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1",
+  "git_commit": "18ac4aadfc2af72aace78e2e4a77de831ba1ccd6",
+  "git_branch": "main",
+  "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+  "platform": "Linux-5.10.134-16.103.al8.x86_64-x86_64-with-glibc2.39",
+  "packages": {
+    "openai": "2.6.1",
+    "torch": "2.9.1+cu129",
+    "transformers": "5.3.0",
+    "numpy": "1.26.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "scikit-learn": null,
+    "pyarrow": "23.0.1",
+    "sglang": "0.5.10.post1"
+  },
+  "gpu_inventory": [
+    "0, NVIDIA L20Z, 81559 MiB, 580.105.08",
+    "1, NVIDIA L20Z, 81559 MiB, 580.105.08",
+    "2, NVIDIA L20Z, 81559 MiB, 580.105.08",
+    "3, NVIDIA L20Z, 81559 MiB, 580.105.08",
+    "4, NVIDIA L20Z, 81559 MiB, 580.105.08",
+    "5, NVIDIA L20Z, 81559 MiB, 580.105.08",
+    "6, NVIDIA L20Z, 81559 MiB, 580.105.08",
+    "7, NVIDIA L20Z, 81559 MiB, 580.105.08"
+  ],
+  "critical_file_hashes": [
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/config/experiment.yaml",
+      "bytes": 4281,
+      "sha256": "fdcc74797e392eb3c02d2098eb9666864132d1c9f9eef5f538eb00ad312226ad"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/config/api_capabilities.yaml",
+      "bytes": 3512,
+      "sha256": "1b1a17200096641d4fc962a60e6afb3ffdcd011322696b10ba5249612432e114"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/config/encoder_registry.csv",
+      "bytes": 910,
+      "sha256": "1696532dc181da89b5884d93618347e721a4171dd0c65549bb3ceb31d005dcd4"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/data/robustness_outputs.jsonl",
+      "bytes": 247683297,
+      "sha256": "74d890473172b9620f948ca2ddf8044675e314aed0016fc87762ddc4fd7de5cb"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/data/robustness_condition_records.jsonl",
+      "bytes": 44764560,
+      "sha256": "e9fc26f38f1a1c98c9b5094f40407d77f69f68ad2715d54880bf01454f4d72eb"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/data/gpt_fixed_references.jsonl",
+      "bytes": 967734,
+      "sha256": "cfdc98da6f30ec270628b026abc8787af92b1ba201f2f68ed70de599045643cc"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/data/external_main_outputs.jsonl",
+      "bytes": 15228208,
+      "sha256": "94d274e5a26cf1849e404e3fd96a0f17713d47c2ccd8d539471233196bb76c5f"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/data/deepseek_main_outputs.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/data/evaluation_index.jsonl",
+      "bytes": 150899804,
+      "sha256": "1966b21207ced39b65e848eb3d6f7b79deefc0af9d91e0259c55cc2706a89045"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/metrics/qwen_judge_evaluations.jsonl",
+      "bytes": 168089193,
+      "sha256": "c0d4895f29ee0b70ef9099130a4892f39870d9e137b0ebc2f4f6a2ba3f9367df"
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_major_r1/metrics/gpt_judge_evaluations.jsonl",
+      "bytes": 148123704,
+      "sha256": "903c5af0571a3b0722b200da74770a3021eaf22b69a30a4bd54044bd6e4d31c5"
+    }
+  ],
+  "credential_values_recorded": false
+}

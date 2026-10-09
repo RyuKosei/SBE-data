@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-10-09T12:14:40.865318Z",
+  "encoder": {
+    "encoder_id": "text2vec_base_chinese",
+    "model_card_name": "shibing624/text2vec-base-chinese",
+    "checkpoint_path": "/home/data_cpfs/zicheng/models/text2vec-base-chinese",
+    "checkpoint_revision": "183bb99aa7af74355fb58d16edf8c13ae7c5433e",
+    "pooling": "mean",
+    "normalize": "true",
+    "max_length": "512",
+    "truncation": "longest_first",
+    "instruction_prefix": "",
+    "batch_size": "128",
+    "device_policy": "cuda",
+    "notes": "Exact legacy checkpoint and pooling"
+  },
+  "input": "revision_computers_major_r1/data/robustness_outputs.jsonl",
+  "input_sha256": "74d890473172b9620f948ca2ddf8044675e314aed0016fc87762ddc4fd7de5cb",
+  "id_field": "run_id",
+  "text_field": "generated_text",
+  "rows": 95994,
+  "shape": [
+    95994,
+    768
+  ],
+  "dtype": "float32",
+  "device": "cuda:1",
+  "batch_size": 128,
+  "chunk_size": 5000
+}

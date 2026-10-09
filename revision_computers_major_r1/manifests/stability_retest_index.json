@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-10-09T13:41:41.437733Z",
+  "selection_seed": 20260918,
+  "rows": 240,
+  "expected_rows": 240,
+  "full_six_model_design_expected_rows": 240,
+  "complete_for_full_six_model_design": true,
+  "models": [
+    "gpt6_luna_api",
+    "qwen35_35b_a3b",
+    "qwen35_4b",
+    "qwen35_9b",
+    "qwen36_27b",
+    "qwen36_35b_a3b"
+  ],
+  "one_preattached_output_per_axis_model_internal_alpha": true
+}

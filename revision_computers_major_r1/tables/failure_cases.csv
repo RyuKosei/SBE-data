@@ -1,0 +1,52 @@
+failure_category,run_id,scenario_id,style_axis,model_id,replicate,target_ratio,generated_text,qwen_style_B_intensity,gpt_style_B_intensity,qwen_content_preservation_pass,gpt_content_preservation_pass,qwen_naturalness,gpt_naturalness,self_coordinate,external_coordinate,self_ice,external_ice,external_out_of_range,trajectory_external_spearman,character_length,length_min,length_max,judge_intensity_difference,anchor_coordinate_difference,selection_severity
+content_failure,major_r1_run_36568e4f483523bec0eb06e2,concision_detail_039,concision_detail,gpt6_luna_api,3,0.0,本地景点开放时间、门票价格及交通路线，请以景区官方公布信息为准。出行前建议确认开放安排和票价，并查询适合的公交、地铁或自驾路线，以便规划行程。,10.0,55.0,False,False,4.0,5.0,0.0,0.06882448671944505,0.0,0.06882448671944505,False,,71,70,160,45.0,0.06882448671944505,2.0
+style_under_or_overshoot,revision_run_044acc20199dd7a94fe9,emotion_apology_023,emotion_apology,qwen35_35b_a3b,1,1.0,办公区空调突发故障导致室内温度过高，已严重干扰大家正常办公。对此造成的不便，我们深表遗憾。行政部已紧急联系维修人员处理，但预计修复时间尚不确定。在此期间，请大家尽量调整工作状态，我们会持续跟进进度并第一时间通报结果。对于此次设备故障带来的影响，我们再次致以诚挚歉意，并承诺将尽快彻底解决该问题，恢复舒适的工作环境。,0.0,8.0,True,True,5.0,5.0,1.0,0.2802904732371571,0.0,0.7197095267628428,False,,157,80,140,8.0,0.7197095267628428,1.0
+external_out_of_range,revision_run_71ea6a700f6931cb0bb6,concision_detail_003,concision_detail,qwen36_35b_a3b,1,0.6666666666666666,正确使用灭火器扑灭初期火灾需遵循规范流程。首先，应迅速提起灭火器并颠倒摇晃，使内部干粉充分松动。接着，拔掉保险销，一手紧握喷管前端，对准火焰根部而非上部。在距离火源约两米处，用力压下压把，左右扫射推进。务必站在上风口或侧风口位置，避免烟雾灼伤。保持冷静，持续喷射直至火焰完全熄灭，防止复燃。,60.0,93.0,False,False,4.0,4.0,0.2845251047730446,1.352705569051835,0.38214156189362203,0.6860389023851684,True,,145,70,160,33.0,1.0681804642787904,0.35270556905183503
+non_monotonic,revision_run_0c77a414917187dfbefa,concision_detail_021,concision_detail,qwen35_35b_a3b,2,0.16666666666666666,节约用水是守护生态环境的关键举措。水资源是自然生态系统的血液，维持着生物多样性和气候稳定。过度取水会导致河流干涸、湿地萎缩，破坏栖息地。通过合理用水，我们能恢复水循环平衡，保护濒危物种，促进生态系统的自我修复与可持续发展，确保地球生命之源长流不息。,65.0,88.0,True,True,5.0,5.0,0.7476432669740436,0.7940330916181514,0.580976600307377,0.6273664249514848,False,-0.9999999999999999,124,70,160,23.0,0.04638982464410779,1.2999999999999998
+length_violation,revision_run_3829b8160bda8ead7d7e,politeness_refusal_027,politeness_refusal,qwen36_27b,1,0.0,"Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Core Semantic:** Invite a friend to go hiking outdoors on the weekend, but the friend refuses due to a scheduling conflict.
+   - **Style A:** Direct, not tactful, slightly stiff, but not insulting.
+   - **Style B:** Tactful, polite, considerate of face, provides buffer reasons.
+   - **Target Style Ratio:** alpha = 0 (100% Style A + 0% Style B). This means the output must be strictly Style A: direct, blunt, slightly stiff, no tact, no polite buffering.
+   - **Hard Requirements:**
+     - Preserve core semantic.
+     - No conflicting new facts.
+     - Length: 70 to 130 Chinese characters.
+     - Output ONLY the final Chinese text. First word must be the text itself.
+     - No explanations, no titles, no markdown lists, no English, no thinking process.
+     - Strictly follow the prompt's negative constraints.
+
+2.  **Deconstruct Core Semantic & Style A:**
+   - Core: I invite friend to weekend hiking -> Friend says no because of",0.0,0.0,False,True,1.0,1.0,0.0,0.46497431635956843,0.0,0.46497431635956843,False,,999,70,130,0.0,0.46497431635956843,869.0
+judge_disagreement,revision_run_0a618f15212931096a52,objectivity_cat_038,objectivity_cat,qwen36_27b,2,1.0,"Here's a thinking process:
+
+1.  **Analyze User Input:**
+    - **Core Semantic:** 斑驳的公告栏前，工作人员小心翼翼抚平纸张的褶皱，居民的目光在文字间流转，汇聚成无声的共鸣。 (In front of the mottled bulletin board, the staff member carefully smooths out the wrinkles on the paper, while residents' gazes flow among the words, converging into a silent resonance.)
+    - **Style A:** Objective observation record, like medical/biological records, restrained, emotionless.
+    - **Style B:** Lyrical modern prose poetry, rich imagery, strong emotion, ornate language.
+    - **Target Style Ratio:** alpha = 1 (0% Style A + 100% Style B). So, purely Style B.
+    - **Hard Requirements:**
+        1. Must preserve core semantic, no conflicting new facts.
+        2. Length: 80 to 150 Chinese characters.
+        3. Only output the main text, no explanations, no titles, no markdown lists.
+        4. No English analysis, no thinking process. First sentence must be the main text.
+    -",95.0,0.0,True,True,5.0,1.0,1.0,0.4054940420276135,0.0,0.5945059579723865,False,,932,80,150,95.0,0.5945059579723865,95.0
+anchor_disagreement,revision_run_f902d9063cdbc1064f07,concision_detail_003,concision_detail,qwen35_4b,3,0.0,正确使用灭火器扑灭初期火灾的关键在于遵循“提、拔、握、压”四字口诀。首先迅速提起灭火器，拔掉保险销，一手握住喷管前端对准火焰根部，另一手压下把手即可喷射。喷射时需注意保持安全距离并左右扫射，待明火熄灭后应继续观察防止复燃，同时确保自身处于上风口位置以避免烟雾侵害。,60.0,88.0,True,True,5.0,5.0,0.0,1.319186508857683,0.0,1.319186508857683,True,,132,70,160,28.0,1.319186508857683,1.319186508857683
+content_failure,major_r1_run_9397556368f75651d2777503,concision_detail_039,concision_detail,gpt6_luna_api,1,0.16666666666666666,该景点开放时间、门票价格及交通路线请以现场公告或官方信息为准。出行前建议确认当天是否开放、票价是否调整，并查询公交、地铁或自驾路线，合理安排到达时间，避免因临时变更影响行程。,60.0,70.0,False,False,5.0,5.0,0.14352080371653686,0.1309843957260951,0.023145862950129797,0.03568227094057155,False,,87,70,160,10.0,0.012536407990441756,2.0
+style_under_or_overshoot,revision_run_0f05f67a98ee0832e03d,emotion_apology_033,emotion_apology,qwen35_9b,2,1.0,各位请注意，原定会议时间被迫临时调整，对此我深感抱歉。此次变动完全是由于我方内部突发紧急事务所致，绝非为了拖延或轻视各位的时间。我对此事负有全部责任，并愿意接受任何合理的批评与监督。请立刻确认新时间，若因此造成任何不便或损失，我们将全力承担后果，绝不推诿。,0.0,18.0,True,False,4.0,3.0,1.0,0.588389572498543,0.0,0.41161042750145704,False,,128,80,140,18.0,0.41161042750145704,1.0
+external_out_of_range,revision_run_d898319a907aa907bffa,concision_detail_003,concision_detail,qwen36_35b_a3b,1,0.0,正确使用灭火器扑灭初期火灾，首先需迅速提起灭火器，并快速奔赴至距离火焰约两至三米的上风口或侧上风口安全位置。接着，拔掉保险销，一手紧握喷管前端以对准火焰根部，另一手用力压下压把。在操作过程中，应保持身体稳定，左右扫射，由近及远地推进，直至火焰完全熄灭，切勿直接对准火苗上部喷射，以免无法有效降温窒息。,60.0,90.0,True,True,5.0,4.0,0.0,1.294362412937327,0.0,1.294362412937327,True,,150,70,160,30.0,1.294362412937327,0.294362412937327
+non_monotonic,revision_run_43500472698ce2a1cbdd,humor_neutral_031,humor_neutral,qwen35_4b,3,0.8333333333333334,社区公告栏最近贴了个垃圾分类新规定，不少居民看了直挠头，心里嘀咕着咋又搞这么复杂。明明以前扔个瓶子都能分清楚，现在突然多了这么多分类，大家心里都有点打鼓，生怕不小心就违规了，毕竟这新规来得太突然，让人有点摸不着头脑，想吐槽却又不想真的乱丢东西。,65.0,65.0,True,True,5.0,4.0,0.43485468049864057,0.3250456070453079,0.3984786528346928,0.5082877262880254,False,-0.9999999999999999,122,80,140,0.0,0.10980907345333268,1.2999999999999998
+length_violation,revision_run_4923536b43a514166376,formality_request_027,formality_request,qwen36_27b,2,0.5,"Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Role:** Chinese short text generator.
+   - **Constraint 1 (Crucial):** Do NOT show reasoning, analysis, or intermediate steps. ONLY output the final Chinese text. First sentence must be the text itself.
+   - **Constraint 2 (Crucial):** Strictly NO Thinking Process, Analysis, steps, titles, or Markdown lists.
+   - **Core Semantics:** 社区需通知居民本周末将暂停供水进行管道维护。(The community needs to notify residents that water supply will be suspended this weekend for pipe maintenance.)
+   - **Style A:** Casual, conversational, like friends chatting.
+   - **Style B:** Formal, official document style, standardized wording, polite but distant.
+   - **Target Style Ratio:** alpha = 3/6 (50% Style A + 50% Style B). This means the text should blend casual/conversational elements with formal/official elements equally, or alternate/combine them to achieve a 50/50 feel.
+   - **Hard Requirements:**
+     1. Preserve core semantics. No conflicting facts.",0.0,25.0,False,True,1.0,1.0,0.5347532641999753,0.4637064666579428,0.034753264199975265,0.036293533342057205,False,,997,70,130,25.0,0.07104679754203247,867.0

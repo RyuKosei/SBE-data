@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-10-09T14:31:23.545706Z",
+  "valid_output_rows": 95994,
+  "expected_condition_records": 96000,
+  "scenario_condition_cells": 6400,
+  "expected_scenario_condition_cells": 6400,
+  "bootstrap_iterations": 10000,
+  "bootstrap_seed": 20260916,
+  "effect_definitions": {
+    "prompt_effect": "mean_temperature(P2-P1)",
+    "temperature_effect": "mean_prompt(low-high)",
+    "interaction": "(P2_low-P2_high)-(P1_low-P1_high)"
+  },
+  "overall_model_weighting": "equal weight over the five original Qwen models after scenario-level matched effects",
+  "confirmatory_test_families": "For each primary metric (BGE-M3 external-reference ICE, Qwen style MAE, GPT style MAE), the three equal-model factorial effects form one Holm family; model- and axis-specific effects are sensitivity summaries with CIs.",
+  "paired_permutation_iterations": 100000
+}

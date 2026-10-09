@@ -1,0 +1,56 @@
+{
+  "decision_date": "2026-10-09",
+  "status": "locked_before_formal_generation",
+  "selected_model_id": "gpt6_luna_api",
+  "requested_model": "gpt-6-luna",
+  "provider": "alibaba_internal_relay",
+  "api_surface": "Responses API",
+  "snapshot_frozen": false,
+  "role": "sixth cross-family generator",
+  "judge_models": [
+    "local Qwen3.6-35B-A3B",
+    "gpt-6-sol"
+  ],
+  "independence_limitation": "The generator and second judge use distinct model aliases but belong to the same GPT family and provider route. The local Qwen judge supplies the cross-family evaluator comparison; the GPT judge must not be described as family-independent from the GPT generator.",
+  "superseded_candidates": {
+    "deepseek-r1": "blocked before inference by missing null-to-CNY exchange-rate configuration",
+    "deepseek-v4-pro-0813": "blocked before inference by missing null-to-CNY exchange-rate configuration",
+    "gpt-5.4-mini": "blocked before inference by missing null-to-USD exchange-rate configuration"
+  },
+  "capability_probe": {
+    "temperature_0_7_supported": true,
+    "reasoning_effort_none_supported": true,
+    "returned_model": "gpt-6-luna"
+  },
+  "real_prompt_smoke": {
+    "rows": 20,
+    "valid_outputs": 20,
+    "content_or_transport_failures": 0,
+    "unique_texts": 20,
+    "mean_character_length": 115.85,
+    "mean_latency_seconds": 3.3989782,
+    "input_tokens": 5002,
+    "output_tokens": 2084,
+    "estimated_cost_usd": 0.0015422,
+    "path": "data/smoke/gpt6_luna_main.jsonl"
+  },
+  "formal_projection": {
+    "outputs": 6720,
+    "estimated_cost_usd": 0.5181792,
+    "with_20_percent_retry_reserve_usd": 0.62181504,
+    "formal_hard_cap_usd": 1.0
+  },
+  "formal_outcome": {
+    "status": "completed",
+    "attempted_request_identities": 6720,
+    "usable_outputs": 6719,
+    "content_failures": 1,
+    "transport_failures": 0,
+    "input_tokens": 1783326,
+    "output_tokens": 597233,
+    "reasoning_tokens": 0,
+    "estimated_cost_usd": 0.4769491,
+    "completed_at": "2026-10-09T13:40:16.212328Z"
+  },
+  "selection_rationale": "The lightweight GPT-6-Luna alias was already schema-valid in the judge pilot, is callable with the required generation parameters, passed the real-prompt generation smoke test, and adds a non-Qwen generation family at negligible incremental cost."
+}

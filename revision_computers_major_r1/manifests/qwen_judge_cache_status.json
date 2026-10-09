@@ -1,0 +1,8 @@
+{
+  "generated_at": "2026-10-09T12:12:56.421094Z",
+  "index_rows": 105594,
+  "legacy_evaluation_rows": 43200,
+  "newly_reused": 0,
+  "cache_rows": 40800,
+  "expected_reusable_when_complete": 40800
+}

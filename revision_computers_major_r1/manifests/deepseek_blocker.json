@@ -1,0 +1,28 @@
+{
+  "recorded_date": "2026-10-09",
+  "last_retested_at": "2026-10-09T12:45:06Z",
+  "recorded_probe_runs": 3,
+  "status": "blocked_before_inference",
+  "provider": "alibaba_internal_dashscope_relay",
+  "requested_model": "deepseek-r1",
+  "planned_outputs": 6720,
+  "successful_outputs": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "total_tokens": 0,
+  "account_balance_available": false,
+  "raw_http_probe_error": "IAI ERR: invalid quota configuration; model=deepseek-r1; detail=missing exchange rate from null to CNY",
+  "sdk_probe_error": "The OpenAI-compatible SDK surfaced the relay failure as TypeError: 'NoneType' object is not subscriptable after the fixed three outer transport attempts. The latest probe explicitly disabled SDK automatic retries.",
+  "interpretation": "This is an internal quota/currency configuration failure, not a model-generated refusal and not an exhausted experimental token budget.",
+  "automatic_substitution_performed": false,
+  "required_external_action": "The internal relay administrator must repair the deepseek-r1 quota/exchange-rate configuration or the author must explicitly authorize and lock another non-Qwen family before a substitute run."
+  ,
+  "alternate_alias_probe": {
+    "tested_at": "2026-10-09T12:57:00Z",
+    "requested_model": "deepseek-v4-pro-0813",
+    "successful_response": false,
+    "token_usage": 0,
+    "raw_error": "IAI ERR: invalid quota configuration; model=deepseek-v4-pro-0813; detail=missing exchange rate from null to CNY",
+    "interpretation": "The same quota/currency failure occurs before model routing. This probe does not establish that the alias is callable after the billing configuration is repaired."
+  }
+}

@@ -1,0 +1,23 @@
+frozen_at: '2026-10-09T12:23:51.026814Z'
+generation_system_prompt: 你是中文短文本生成器。不要展示推理、分析或中间步骤；任何情况下都只输出最终中文正文。
+reference_system_prompt: 你是中文短文本生成器。只输出最终中文正文，不写标题、Markdown、解释、分析或推理过程。
+judge_system_prompt: 你是严格的中文文本评估器。独立判断内容保持与风格强度，只输出一个合法 JSON 对象，不写 Markdown 或解释。风格强度只看表达方式，不因文本更长就自动判定更接近风格B。
+hashes:
+  generation_system_prompt_sha256: df8ec39b3a732cfb2584081add772266050eb3da072f07dac333fdea11aee6a9
+  reference_system_prompt_sha256: ad9da3ddb54512288e2fcd9e42f9680f3aa3f4216f6b0ce5840bc25c5d985092
+  judge_system_prompt_sha256: e40d35a43f946eba2ba957a17a0455109fb88907ef48fb2ede017be339e8299c
+  judge_schema_2_sha256: b1b43ae499ccadabd29c3fb9b30ae1e16bb2e924a3781d83f5a03337045cda37
+  judge_schema_3_sha256: 04a8e868ad973a96cbf1d9b82503bd66f98205c1f578f222abac87c2daa640f9
+  judge_schema_4_sha256: 037c172d4f0299fe1b5bfdd7ff58dc1f866572594b4c34614f32a69e7c24cdcf
+content_pass_rule: coverage >= 0.90 and not factual_contradiction and not task_result_changed_by_addition
+  and not unjudgeable
+zero_checkpoint_policy: data error; never assign automatic coverage 0 or 1
+numeric_boolean_policy: booleans are rejected for style_B_intensity and naturalness
+blind_fields_excluded_from_judge_prompt:
+- target_ratio
+- model_id
+- model_family
+- generation_seed
+- replicate_id
+- endpoint_identity
+- original_generation_prompt

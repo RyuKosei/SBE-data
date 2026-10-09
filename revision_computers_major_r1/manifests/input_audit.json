@@ -1,0 +1,351 @@
+{
+  "generated_at": "2026-10-09T14:33:02.319585Z",
+  "git_commit": "b97dc8500e3e10c98c54806dfcdbfe9596394921",
+  "project_root": "/home/data_cpfs/lizihua/sbe",
+  "legacy_root": "/home/data_cpfs/lizihua/sbe/revision_computers_final",
+  "output_root": "revision_computers_major_r1",
+  "files": {
+    "scenarios": {
+      "path": "/home/data_cpfs/lizihua/sbe/data/scenarios/styleblend_8axis_scenarios_v1.jsonl",
+      "exists": true,
+      "bytes": 185240,
+      "sha256": "c6b7ba3e514eff070ab7ccd7d6a5929dc2a3ee0147db2b7eed802b859f6b16fc",
+      "rows": 320
+    },
+    "main": {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/qwen_family_outputs.jsonl",
+      "exists": true,
+      "bytes": 80943240,
+      "sha256": "345de0d693ae2f89c03bba73850f1de576ccdfc4f0c1b26a2c41176c6ed495be",
+      "rows": 33600
+    },
+    "robustness": {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/robustness_outputs.jsonl",
+      "exists": true,
+      "bytes": 23430399,
+      "sha256": "d1d6567d9321466be3dc68840be677bc4125c11205225dd69252d84d35e82b9f",
+      "rows": 9600
+    },
+    "main_judge": {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/metrics/llm_evaluations.jsonl",
+      "exists": true,
+      "bytes": 31936047,
+      "sha256": "96db5d695347f325eaf3d60dbcfb2af663492a546951706353696cf784e02131",
+      "rows": 33600
+    },
+    "robustness_judge": {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/metrics/robustness_llm_evaluations.jsonl",
+      "exists": true,
+      "bytes": 9153008,
+      "sha256": "6bc9a7f448ea836345a6354ed346255033c891b755492c1776c6e5cc002c9b93",
+      "rows": 9600
+    },
+    "main_config": {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/main_experiment.yaml",
+      "exists": true,
+      "bytes": 2318,
+      "sha256": "5412ec323239a0b3316dfd7c4348b31a659939c4ad08218fad871963ce7d988e",
+      "rows": null
+    },
+    "robustness_config": {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/robustness_experiment.yaml",
+      "exists": true,
+      "bytes": 978,
+      "sha256": "e229c6e6fef12570320133042eae686208d81be41c69e54c97f6b2806c55cf9e",
+      "rows": null
+    },
+    "evaluator_config": {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/evaluator.yaml",
+      "exists": true,
+      "bytes": 428,
+      "sha256": "70a41c6ac8d8237f90c05719ce21c4c75962f2b7bb8638f0fc48c782bc715d7b",
+      "rows": null
+    },
+    "model_registry": {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/model_registry.csv",
+      "exists": true,
+      "bytes": 1425,
+      "sha256": "6f415b7deac9f82ec60f3fe6af7183f2f1dbf9a633f34ecf9f9b9aa4cb59551a",
+      "rows": null
+    },
+    "encoder_registry": {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/config/encoder_registry.csv",
+      "exists": true,
+      "bytes": 950,
+      "sha256": "9e4417cd0cd6ce785993bdfcc8770dd8b3b88d791895c8187a0cc5561acc2ca5",
+      "rows": null
+    }
+  },
+  "scenarios": {
+    "count": 320,
+    "axes": {
+      "concision_detail": 40,
+      "emotion_apology": 40,
+      "empathy_clinical": 40,
+      "expertise_explain": 40,
+      "formality_request": 40,
+      "humor_neutral": 40,
+      "objectivity_cat": 40,
+      "politeness_refusal": 40
+    },
+    "duplicate_scenario_ids": 0,
+    "content_check_count_min": 2,
+    "content_check_count_max": 4,
+    "content_check_count_distribution": {
+      "2": 32,
+      "3": 207,
+      "4": 81
+    },
+    "missing_content_checks": 0
+  },
+  "main": {
+    "rows": 33600,
+    "duplicate_keys": 0,
+    "duplicate_run_ids": 0,
+    "missing_combinations": 0,
+    "missing_preview": [],
+    "models": {
+      "qwen35_35b_a3b": 6720,
+      "qwen35_4b": 6720,
+      "qwen35_9b": 6720,
+      "qwen36_27b": 6720,
+      "qwen36_35b_a3b": 6720
+    },
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "ratios": [
+      0.0,
+      0.16666666666666666,
+      0.3333333333333333,
+      0.5,
+      0.6666666666666666,
+      0.8333333333333334,
+      1.0
+    ],
+    "prompt_templates": [
+      "computers_explicit_ratio_v1"
+    ],
+    "temperatures": [
+      0.7
+    ],
+    "top_p": [
+      0.9
+    ],
+    "max_new_tokens": [
+      256
+    ]
+  },
+  "robustness": {
+    "rows": 9600,
+    "duplicate_keys": 0,
+    "duplicate_run_ids": 0,
+    "reused_main_rows": 2400,
+    "new_rows": 7200,
+    "scenario_count": 40,
+    "models": {
+      "qwen35_4b": 2400,
+      "qwen35_9b": 2400,
+      "qwen36_27b": 2400,
+      "qwen36_35b_a3b": 2400
+    },
+    "conditions": {
+      "computers_explicit_ratio_v1|temperature=0.2": 2400,
+      "computers_explicit_ratio_v1|temperature=0.7": 2400,
+      "computers_explicit_ratio_v2|temperature=0.2": 2400,
+      "computers_explicit_ratio_v2|temperature=0.7": 2400
+    }
+  },
+  "evaluations": {
+    "main_rows": 33600,
+    "main_duplicate_run_ids": 0,
+    "main_missing_generation_ids": 0,
+    "robustness_rows": 9600,
+    "robustness_duplicate_run_ids": 0,
+    "robustness_missing_generation_ids": 0
+  },
+  "embeddings": [
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/bge_m3/qwen35_35b_a3b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "12200bbce858571d135a3f86654cf38a29a9a840e78adfe5ef573905027ba853",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/bge_m3/qwen35_4b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "a111c58042371a1bac8ee1199420ad62e56860d7e8350a849bb0f85aacd2a724",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/bge_m3/qwen35_9b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "e0eaffa86a556bc651d2fb58eb787dbf6c76a09d7ed458c0a16523dba3b904b0",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/bge_m3/qwen36_27b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "3fc03375b03a2b0e72abb6c8889b4343e937980e8a26093d8667c4617ae975b5",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/bge_m3/qwen36_35b_a3b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "2956e8b7d0be1a4074edb18f8b03c08bfe2b88a0fa4b63c1f73069544b49a131",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/multilingual_e5_large_instruct/qwen35_35b_a3b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "059628fee0757dba4854548cf3d07459d1410662a2c1ab6e94bc52f372148ca6",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/multilingual_e5_large_instruct/qwen35_4b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "51798d32162626a31dad7461e0dd5422cb4240b7f59f23861714494f2045bd94",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/multilingual_e5_large_instruct/qwen35_9b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "307b028f6aeda91d6808f4b9c0a28fd628811a30ac555513e9cfd134686fdd39",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/multilingual_e5_large_instruct/qwen36_27b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "65f4426924331b71d1004593d88a0ff74fb9c9e28d63cdb4d53b2d84123653a8",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/multilingual_e5_large_instruct/qwen36_35b_a3b.npz",
+      "exists": true,
+      "bytes": 28412674,
+      "sha256": "191baeccdede522c174b8b48d880c516d6209761004d14b819fe1ff0673ae65a",
+      "rows": null,
+      "shape": [
+        6720,
+        1024
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/text2vec_base_chinese/qwen35_35b_a3b.npz",
+      "exists": true,
+      "bytes": 21531394,
+      "sha256": "42a8163cb5c9c957acc3f87a43e5765002dbbe2219802528deac08ee02928f1a",
+      "rows": null,
+      "shape": [
+        6720,
+        768
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/text2vec_base_chinese/qwen35_4b.npz",
+      "exists": true,
+      "bytes": 21531394,
+      "sha256": "2451103ddace8b1908e7ef0eba41cb270e2f4e0675c83d2e545b7b21c6de743e",
+      "rows": null,
+      "shape": [
+        6720,
+        768
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/text2vec_base_chinese/qwen35_9b.npz",
+      "exists": true,
+      "bytes": 21531394,
+      "sha256": "ab88b71de1e84120f3dc0c82a5cbb0f1c6e3b4c8172f662e8a02977b54b93f13",
+      "rows": null,
+      "shape": [
+        6720,
+        768
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/text2vec_base_chinese/qwen36_27b.npz",
+      "exists": true,
+      "bytes": 21531394,
+      "sha256": "605179505369619b8d6b16ac5af566e24fd7ef083217c65ce39875a54431e6ea",
+      "rows": null,
+      "shape": [
+        6720,
+        768
+      ],
+      "duplicate_run_ids": 0
+    },
+    {
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/embeddings/text2vec_base_chinese/qwen36_35b_a3b.npz",
+      "exists": true,
+      "bytes": 21531394,
+      "sha256": "eb736c4ae2b0ef579afb25b6c36f1a7c18b35722415ba9001900b047ea8fedf2",
+      "rows": null,
+      "shape": [
+        6720,
+        768
+      ],
+      "duplicate_run_ids": 0
+    }
+  ]
+}

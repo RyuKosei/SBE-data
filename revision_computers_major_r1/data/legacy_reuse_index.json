@@ -1,0 +1,33 @@
+{
+  "legacy_root": "/home/data_cpfs/lizihua/sbe/revision_computers_final",
+  "read_only": true,
+  "git_commit_at_audit": "b97dc8500e3e10c98c54806dfcdbfe9596394921",
+  "artifacts": [
+    {
+      "role": "five-Qwen main generation",
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/qwen_family_outputs.jsonl",
+      "rows": 33600,
+      "sha256": "345de0d693ae2f89c03bba73850f1de576ccdfc4f0c1b26a2c41176c6ed495be"
+    },
+    {
+      "role": "legacy 40-scene robustness source",
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/data/robustness_outputs.jsonl",
+      "rows": 9600,
+      "sha256": "d1d6567d9321466be3dc68840be677bc4125c11205225dd69252d84d35e82b9f"
+    },
+    {
+      "role": "legacy main Qwen judge cache source",
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/metrics/llm_evaluations.jsonl",
+      "rows": 33600,
+      "sha256": "96db5d695347f325eaf3d60dbcfb2af663492a546951706353696cf784e02131"
+    },
+    {
+      "role": "legacy robustness Qwen judge cache source",
+      "path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/metrics/robustness_llm_evaluations.jsonl",
+      "rows": 9600,
+      "sha256": "6bc9a7f448ea836345a6354ed346255033c891b755492c1776c6e5cc002c9b93"
+    }
+  ],
+  "embedding_reuse": "The 15 frozen per-model archives under revision_computers_final/data/embeddings are referenced directly. Their individual hashes and shapes are recorded in manifests/input_audit.json.",
+  "judge_cache_validation": "40,800 legacy judgments were reused only after evaluator ID and prompt hash matched; schema/output-text hashes were reconstructed from the locked source rows and stored with item-identity-v2 cache keys."
+}

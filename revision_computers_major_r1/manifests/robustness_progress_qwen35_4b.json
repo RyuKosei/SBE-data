@@ -1,0 +1,9 @@
+{
+  "model_id": "qwen35_4b",
+  "planned": 19200,
+  "existing_at_start": 6603,
+  "attempted": 12597,
+  "successes": 12597,
+  "failures": 0,
+  "updated_at": "2026-10-09T11:55:08.775506Z"
+}

@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-10-09T14:31:30.848026Z",
+  "evaluation_index_rows": 112313,
+  "qwen_valid": 112266,
+  "gpt_valid": 112313,
+  "matched_valid": 112266,
+  "bootstrap_iterations": 10000,
+  "bootstrap_seed": 20260916,
+  "paired_test": "two-sided Wilcoxon signed-rank on scenario-level matched model differences",
+  "holm_family_definition": "all pairwise model comparisons within one judge for main-experiment style MAE",
+  "human_validation": false
+}

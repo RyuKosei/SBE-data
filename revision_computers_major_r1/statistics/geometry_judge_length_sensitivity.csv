@@ -1,0 +1,3 @@
+judge,seed_averaged_before_analysis,controls,residual_correlation,residual_correlation_ci_low,residual_correlation_ci_high,length_controlled_correlation,length_controlled_ci_low,length_controlled_ci_high,valid_rows,valid_scenarios
+qwen,True,target_ratio + model_id + style_axis + scenario_id fixed effects,0.5758938544436111,0.5456892676112499,0.603599386420632,0.576005971456402,0.5459320358984142,0.6035989647824623,9600,320
+gpt,True,target_ratio + model_id + style_axis + scenario_id fixed effects,0.6184839460809124,0.5880672109071873,0.6472098451178959,0.6185683441543809,0.5880863815674396,0.6472578241148286,9600,320

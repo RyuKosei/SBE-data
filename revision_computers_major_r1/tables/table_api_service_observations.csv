@@ -1,0 +1,5 @@
+service,stage,recorded_records,successful_records,non_success_records,requested_models,response_models,latency_p50_seconds,latency_p95_seconds,input_or_prompt_tokens,output_or_completion_tokens,deployment_hardware_known,comparable_to_local_gpu_benchmark
+Alibaba internal GPT relay,fixed-reference generation,640,640,0,gpt-6-sol,gpt-6-sol,3.4276765,5.200541949999998,151586,54034,False,False
+Alibaba internal GPT relay,independent judge,112313,112313,0,gpt-6-sol,gpt-6-sol,3.064639,5.259245999999999,57688538,6643665,False,False
+Alibaba internal GPT relay,judge stability retest,240,240,0,gpt-6-sol,gpt-6-sol,3.0486364999999997,4.876427199999999,124150,14199,False,False
+Alibaba internal GPT relay,cross-family generation,6720,6719,1,gpt-6-luna,gpt-6-luna,3.172372,5.190122699999993,1783326,597233,False,False

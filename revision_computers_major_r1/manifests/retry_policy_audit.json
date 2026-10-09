@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-10-09T12:42:00Z",
+  "locked_outer_transport_attempts": 3,
+  "current_sdk_max_retries": 0,
+  "current_gpt_request_timeout_seconds": 90,
+  "current_deepseek_request_timeout_seconds": 180,
+  "gpt_main_transition": {
+    "valid_rows_before_sdk_retry_was_explicitly_disabled": 11584,
+    "surfaced_failures_before_transition": 0,
+    "surfaced_http_429_before_transition": 0,
+    "limitation": "The OpenAI Python SDK default retry behavior was not explicitly disabled for these early successful calls, so hidden transport retries cannot be reconstructed from the returned objects. The valid judgments are retained; all subsequent calls set max_retries=0 and use only the recorded outer policy."
+  },
+  "gpt_reference_transition": {
+    "valid_rows_before_sdk_retry_was_explicitly_disabled": 640,
+    "surfaced_failures": 0,
+    "limitation": "The completed reference batch used the SDK default retry setting. No exception reached the outer retry loop, but any hidden SDK retry is not observable. References are retained because this affects request-attempt accounting, not response selection."
+  },
+  "deepseek_probe_transition": {
+    "recorded_terminal_probe_failures": 2,
+    "successful_outputs": 0,
+    "token_usage": 0,
+    "limitation": "The two pre-inference probes used the SDK default retry setting inside a three-attempt outer loop. The relay rejected quota configuration before inference, so no generated output or token usage resulted. Future probes set max_retries=0."
+  },
+  "gpt_judge_process_restarts": {
+    "events": [
+      "concurrency reduced from 64 to 48 while the GPT-6-Luna generation queue was active",
+      "concurrency restored from 48 to 64 at 2026-10-09T13:44:01Z after the generation queue completed"
+    ],
+    "cache_behavior": "Every flushed evaluation_item_id is skipped on restart; no flushed judgment is intentionally repeated.",
+    "billing_limitation": "Tasks in flight at interruption may have reached the relay without returning usage to the client. Their possible charge is not included in the response-derived cost estimate; at most one concurrency window was exposed per restart. This affects exact billing reconciliation, not retained-score selection."
+  },
+  "interpretation": "Do not claim exact HTTP-attempt counts for the pre-transition calls. Experimental outputs and scoring cache identities remain valid and no score-dependent retry was performed."
+}

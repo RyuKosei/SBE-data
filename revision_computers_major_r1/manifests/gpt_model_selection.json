@@ -1,0 +1,45 @@
+{
+  "decision_date": "2026-10-09",
+  "status": "locked_before_formal_reference_and_judge_runs",
+  "selected_model": "gpt-6-sol",
+  "provider": "alibaba_internal_relay",
+  "snapshot_frozen": false,
+  "pilot_design": {
+    "real_generation_outputs": 80,
+    "same_locked_rubric_and_strict_schema": true,
+    "reference_model": "gpt-6-sol"
+  },
+  "pilot_results": {
+    "gpt-6-sol": {
+      "valid": 80,
+      "failed": 0,
+      "median_latency_seconds": 3.021,
+      "input_tokens": 41591,
+      "output_tokens": 4733,
+      "estimated_cost_usd": 0.130512
+    },
+    "gpt-5.6-luna_vs_gpt-6-sol": {
+      "style_intensity_pearson": 0.9526,
+      "style_intensity_spearman": 0.9252,
+      "style_intensity_mean_absolute_difference": 6.925,
+      "content_pass_agreement": 0.75,
+      "naturalness_mean_absolute_difference": 0.388,
+      "failed": 0
+    },
+    "gpt-6-luna_vs_gpt-6-sol": {
+      "style_intensity_pearson": 0.9652,
+      "style_intensity_spearman": 0.9381,
+      "style_intensity_mean_absolute_difference": 6.513,
+      "content_pass_agreement": 0.8,
+      "naturalness_mean_absolute_difference": 0.325,
+      "failed": 0
+    }
+  },
+  "cost_projection_for_112560_formal_judgments": {
+    "base_usd": 183.63,
+    "with_20_percent_retry_reserve_usd": 220.36
+  },
+  "decision_rationale": "gpt-6-sol had complete schema compliance in the real-data pilot and stronger content-pass agreement than the cheaper candidates while remaining below the author-provided USD 300 ceiling with a 20% reserve.",
+  "operational_gpt_hard_cap_usd": 240.0,
+  "account_balance_available_from_relay": false
+}

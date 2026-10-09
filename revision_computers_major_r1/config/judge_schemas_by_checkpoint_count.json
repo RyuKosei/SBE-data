@@ -1,0 +1,137 @@
+{
+  "2": {
+    "type": "object",
+    "properties": {
+      "covered": {
+        "type": "array",
+        "items": {
+          "type": "boolean"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "added_key_information": {
+        "type": "boolean"
+      },
+      "task_result_changed_by_addition": {
+        "type": "boolean"
+      },
+      "factual_contradiction": {
+        "type": "boolean"
+      },
+      "style_B_intensity": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "naturalness": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      },
+      "unjudgeable": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "covered",
+      "added_key_information",
+      "task_result_changed_by_addition",
+      "factual_contradiction",
+      "style_B_intensity",
+      "naturalness",
+      "unjudgeable"
+    ],
+    "additionalProperties": false
+  },
+  "3": {
+    "type": "object",
+    "properties": {
+      "covered": {
+        "type": "array",
+        "items": {
+          "type": "boolean"
+        },
+        "minItems": 3,
+        "maxItems": 3
+      },
+      "added_key_information": {
+        "type": "boolean"
+      },
+      "task_result_changed_by_addition": {
+        "type": "boolean"
+      },
+      "factual_contradiction": {
+        "type": "boolean"
+      },
+      "style_B_intensity": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "naturalness": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      },
+      "unjudgeable": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "covered",
+      "added_key_information",
+      "task_result_changed_by_addition",
+      "factual_contradiction",
+      "style_B_intensity",
+      "naturalness",
+      "unjudgeable"
+    ],
+    "additionalProperties": false
+  },
+  "4": {
+    "type": "object",
+    "properties": {
+      "covered": {
+        "type": "array",
+        "items": {
+          "type": "boolean"
+        },
+        "minItems": 4,
+        "maxItems": 4
+      },
+      "added_key_information": {
+        "type": "boolean"
+      },
+      "task_result_changed_by_addition": {
+        "type": "boolean"
+      },
+      "factual_contradiction": {
+        "type": "boolean"
+      },
+      "style_B_intensity": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "naturalness": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      },
+      "unjudgeable": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "covered",
+      "added_key_information",
+      "task_result_changed_by_addition",
+      "factual_contradiction",
+      "style_B_intensity",
+      "naturalness",
+      "unjudgeable"
+    ],
+    "additionalProperties": false
+  }
+}

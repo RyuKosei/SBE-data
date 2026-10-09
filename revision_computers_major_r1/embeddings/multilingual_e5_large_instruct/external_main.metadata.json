@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-10-09T13:41:16.933310Z",
+  "encoder": {
+    "encoder_id": "multilingual_e5_large_instruct",
+    "model_card_name": "intfloat/multilingual-e5-large-instruct",
+    "checkpoint_path": "/home/data_cpfs/lizihua/sbe/revision_computers_final/models/multilingual-e5-large-instruct",
+    "checkpoint_revision": "274baa43b0e13e37fafa6428dbc7938e62e5c439",
+    "pooling": "mean",
+    "normalize": "true",
+    "max_length": "512",
+    "truncation": "longest_first",
+    "instruction_prefix": "Instruct: Represent the Chinese passage for style comparison\\nQuery: ",
+    "batch_size": "64",
+    "device_policy": "cuda",
+    "notes": "Exact legacy checkpoint and instruction prefix"
+  },
+  "input": "revision_computers_major_r1/data/external_main_outputs.jsonl",
+  "input_sha256": "94d274e5a26cf1849e404e3fd96a0f17713d47c2ccd8d539471233196bb76c5f",
+  "id_field": "run_id",
+  "text_field": "generated_text",
+  "rows": 6720,
+  "shape": [
+    6720,
+    1024
+  ],
+  "dtype": "float32",
+  "device": "cuda:2",
+  "batch_size": 64,
+  "chunk_size": 5000
+}

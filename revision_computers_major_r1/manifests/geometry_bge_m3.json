@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-10-09T13:42:14.043476Z",
+  "encoder_id": "bge_m3",
+  "epsilon": 1e-12,
+  "normalization_denominator": "endpoint_separation + epsilon (legacy convention)",
+  "exact_denominator_sensitivity_saved": true,
+  "epsilon_max_absolute_difference_main": {
+    "drift": 1.7243984018477931e-10,
+    "interpolation_distance": 1.7325518797406403e-10
+  },
+  "main_sample_rows": 120957,
+  "main_trajectory_rows": 17280,
+  "robustness_sample_rows": 287982,
+  "main_models": [
+    "gpt6_luna_api",
+    "qwen35_35b_a3b",
+    "qwen35_4b",
+    "qwen35_9b",
+    "qwen36_27b",
+    "qwen36_35b_a3b"
+  ],
+  "collapsed_anchor_counts_main": {
+    "external_fixed_reference": 0,
+    "fixed_pooled_qwen": 0,
+    "self_anchored": 0
+  }
+}

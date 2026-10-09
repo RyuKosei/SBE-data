@@ -1,0 +1,14 @@
+currency: USD
+unit: per_million_tokens
+source: user_supplied_internal_model_table_2026-10-09
+short_context_threshold_tokens: 272000
+models:
+  gpt-6-sol: {input: 2.0, cached_input: 0.2, output: 10.0}
+  gpt-6-luna: {input: 0.1, cached_input: 0.01, output: 0.5}
+  gpt-5.6-luna: {input: 0.2, cached_input: 0.02, output: 1.2}
+  gpt-5.6-terra: {input: 2.0, cached_input: 0.2, output: 12.0}
+  gpt-5.6-sol: {input: 4.0, cached_input: 0.4, output: 20.0}
+  gpt-5.4-mini: {input: 0.75, cached_input: 0.075, output: 4.5}
+notes:
+  - "Cost accounting uses uncached input unless a response explicitly reports cached tokens."
+  - "This file is not evidence of account balance; the relay exposes no balance endpoint in the tested API."

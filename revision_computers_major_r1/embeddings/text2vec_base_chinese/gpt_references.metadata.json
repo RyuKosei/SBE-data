@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-10-09T12:02:12.012544Z",
+  "encoder": {
+    "encoder_id": "text2vec_base_chinese",
+    "model_card_name": "shibing624/text2vec-base-chinese",
+    "checkpoint_path": "/home/data_cpfs/zicheng/models/text2vec-base-chinese",
+    "checkpoint_revision": "183bb99aa7af74355fb58d16edf8c13ae7c5433e",
+    "pooling": "mean",
+    "normalize": "true",
+    "max_length": "512",
+    "truncation": "longest_first",
+    "instruction_prefix": "",
+    "batch_size": "128",
+    "device_policy": "cuda",
+    "notes": "Exact legacy checkpoint and pooling"
+  },
+  "input": "revision_computers_major_r1/data/gpt_fixed_references.jsonl",
+  "input_sha256": "cfdc98da6f30ec270628b026abc8787af92b1ba201f2f68ed70de599045643cc",
+  "id_field": "reference_id",
+  "text_field": "reference_text",
+  "rows": 640,
+  "shape": [
+    640,
+    768
+  ],
+  "dtype": "float32",
+  "device": "cuda:1",
+  "batch_size": 128,
+  "chunk_size": 5000
+}

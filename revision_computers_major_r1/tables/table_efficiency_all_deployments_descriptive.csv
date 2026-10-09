@@ -1,0 +1,6 @@
+model_id,gpu_model,gpu_count,tensor_parallel_size,request_concurrency,precision,quantization,output_count,input_tokens_total,output_tokens_total,wall_clock_seconds,system_output_tokens_per_second,request_latency_p50_seconds,request_latency_p95_seconds,peak_gpu_memory_sum_mib,direct_comparison_group
+qwen35_35b_a3b,NVIDIA L20Z,2,2,32,BF16,none,6720,1760556,541906,489.238314,1107.652414974188,2.2894915,3.4638214999999994,142551.0,L20Z_TP2_BF16_concurrency32
+qwen35_4b,NVIDIA L20Z,1,1,64,BF16,none,6720,1760556,448308,220.183195,2036.0681931243664,1.918528,3.2002866999999995,68096.0,not_directly_comparable_concurrency64
+qwen35_9b,NVIDIA L20Z,1,1,48,BF16,none,6720,1760556,504026,295.158296,1707.6463945976975,1.9163575,3.1062406499999984,68555.0,not_directly_comparable_concurrency48
+qwen36_27b,NVIDIA L20Z,2,2,32,BF16,none,6720,1760556,554356,818.712702,677.1068760088689,3.175987,5.346047449999996,144403.0,L20Z_TP2_BF16_concurrency32
+qwen36_35b_a3b,NVIDIA L20Z,2,2,32,BF16,none,6720,1760556,595681,515.447082,1155.6588848823865,2.386556,3.6728521,141996.0,L20Z_TP2_BF16_concurrency32

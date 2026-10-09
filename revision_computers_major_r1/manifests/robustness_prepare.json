@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-10-09T11:44:51.210252Z",
+  "models": {
+    "qwen35_4b": {
+      "expected": 19200,
+      "reused_main": 4800,
+      "reused_old_robustness": 1800,
+      "existing_or_reused": 6600,
+      "missing": 12600
+    },
+    "qwen35_9b": {
+      "expected": 19200,
+      "reused_main": 4800,
+      "reused_old_robustness": 1800,
+      "existing_or_reused": 6600,
+      "missing": 12600
+    },
+    "qwen35_35b_a3b": {
+      "expected": 19200,
+      "reused_main": 4800,
+      "reused_old_robustness": 0,
+      "existing_or_reused": 4800,
+      "missing": 14400
+    },
+    "qwen36_27b": {
+      "expected": 19200,
+      "reused_main": 4800,
+      "reused_old_robustness": 1800,
+      "existing_or_reused": 6600,
+      "missing": 12600
+    },
+    "qwen36_35b_a3b": {
+      "expected": 19200,
+      "reused_main": 4800,
+      "reused_old_robustness": 1800,
+      "existing_or_reused": 6600,
+      "missing": 12600
+    }
+  }
+}

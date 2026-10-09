@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-10-09T15:55:07.514803Z",
+  "evaluation_index": {
+    "path": "revision_computers_major_r1/data/evaluation_index.jsonl",
+    "rows": 112313,
+    "unique_identities": 112313,
+    "duplicate_identities": 0,
+    "missing_identity": 0
+  },
+  "evaluation_index_source_counts": {
+    "main_external": 6719,
+    "main_qwen": 33600,
+    "robustness_qwen": 71994
+  },
+  "qwen_judge": {
+    "path": "revision_computers_major_r1/metrics/qwen_judge_evaluations.jsonl",
+    "rows": 112266,
+    "unique_identities": 112266,
+    "duplicate_identities": 0,
+    "missing_identity": 0,
+    "terminal_failures": {
+      "path": "revision_computers_major_r1/logs/qwen_judge_failures.jsonl",
+      "rows": 47,
+      "unique_identities": 47,
+      "duplicate_identities": 0,
+      "missing_identity": 0
+    },
+    "covered_index_items": 112313,
+    "missing_index_items": 0,
+    "orphan_items": 0
+  },
+  "gpt_judge": {
+    "path": "revision_computers_major_r1/metrics/gpt_judge_evaluations.jsonl",
+    "rows": 112313,
+    "unique_identities": 112313,
+    "duplicate_identities": 0,
+    "missing_identity": 0,
+    "terminal_failures": {
+      "path": "revision_computers_major_r1/logs/gpt_judge_failures.jsonl",
+      "rows": 0,
+      "unique_identities": 0,
+      "duplicate_identities": 0,
+      "missing_identity": 0
+    },
+    "covered_index_items": 112313,
+    "missing_index_items": 0,
+    "orphan_items": 0,
+    "hashed_response_ids_present": 109881,
+    "hashed_response_ids_missing": 2432,
+    "response_models": {
+      "gpt-6-sol": 112313
+    },
+    "recorded_outer_retry_counts": {
+      "0": 112246,
+      "1": 67
+    }
+  },
+  "external_generator": {
+    "model": "gpt-6-luna",
+    "attempted_request_identities": 6720,
+    "usable_outputs": 6719,
+    "expected_outputs": 6720,
+    "status_counts": {
+      "incomplete_with_text": 1,
+      "ok": 6719
+    },
+    "requested_models": {
+      "gpt-6-luna": 6720
+    },
+    "response_models": {
+      "gpt-6-luna": 6720
+    },
+    "first_response_timestamp": "2026-10-09T13:13:15.051876Z",
+    "last_response_timestamp": "2026-10-09T13:40:16.208868Z"
+  },
+  "all_external_request_identities_attempted": true,
+  "complete_six_model_evaluation_index": false,
+  "all_planned_generation_identities_accounted_for": true,
+  "planned_generation_failure_count": 7,
+  "all_available_index_items_terminally_accounted_for": true,
+  "critical_file_hashes": [
+    {
+      "path": "revision_computers_major_r1/data/evaluation_index.jsonl",
+      "bytes": 150899804,
+      "sha256": "1966b21207ced39b65e848eb3d6f7b79deefc0af9d91e0259c55cc2706a89045"
+    },
+    {
+      "path": "revision_computers_major_r1/metrics/qwen_judge_evaluations.jsonl",
+      "bytes": 168089193,
+      "sha256": "c0d4895f29ee0b70ef9099130a4892f39870d9e137b0ebc2f4f6a2ba3f9367df"
+    },
+    {
+      "path": "revision_computers_major_r1/metrics/gpt_judge_evaluations.jsonl",
+      "bytes": 148123704,
+      "sha256": "903c5af0571a3b0722b200da74770a3021eaf22b69a30a4bd54044bd6e4d31c5"
+    },
+    {
+      "path": "revision_computers_major_r1/data/gpt_fixed_references.jsonl",
+      "bytes": 967734,
+      "sha256": "cfdc98da6f30ec270628b026abc8787af92b1ba201f2f68ed70de599045643cc"
+    },
+    {
+      "path": "revision_computers_major_r1/data/external_main_outputs.jsonl",
+      "bytes": 15228208,
+      "sha256": "94d274e5a26cf1849e404e3fd96a0f17713d47c2ccd8d539471233196bb76c5f"
+    },
+    {
+      "path": "revision_computers_major_r1/data/deepseek_main_outputs.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

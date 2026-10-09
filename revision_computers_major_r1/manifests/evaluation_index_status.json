@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-09T14:00:16.513558Z",
+  "total": 112313,
+  "counts": {
+    "robustness_qwen": 71994,
+    "main_qwen": 33600,
+    "main_external": 6719
+  },
+  "expected_complete_total": 112320,
+  "usable_index_strictly_complete": false,
+  "explicitly_failed_and_excluded": 7,
+  "external_failures_excluded": 1,
+  "robustness_failures_excluded": 6,
+  "all_planned_identities_accounted_for": true,
+  "complete": false
+}

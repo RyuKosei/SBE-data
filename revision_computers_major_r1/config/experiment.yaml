@@ -1,0 +1,117 @@
+experiment_id: computers_4602519_major_r1
+created_date: 2026-10-09
+language: zh
+project_root: /home/data_cpfs/lizihua/sbe
+legacy_root: /home/data_cpfs/lizihua/sbe/revision_computers_final
+output_root: /home/data_cpfs/lizihua/sbe/revision_computers_major_r1
+scenario_file: /home/data_cpfs/lizihua/sbe/data/scenarios/styleblend_8axis_scenarios_v1.jsonl
+
+main:
+  qwen_models:
+    - qwen35_4b
+    - qwen35_9b
+    - qwen35_35b_a3b
+    - qwen36_27b
+    - qwen36_35b_a3b
+  external_model_id: gpt6_luna_api
+  target_ratios: [0.0, 0.16666666666666666, 0.3333333333333333, 0.5, 0.6666666666666666, 0.8333333333333334, 1.0]
+  interior_ratios: [0.16666666666666666, 0.3333333333333333, 0.5, 0.6666666666666666, 0.8333333333333334]
+  qwen_seeds: [1, 2, 3]
+  external_replicates: [1, 2, 3]
+  prompt_template_id: computers_explicit_ratio_v1
+
+external_generator:
+  provider: alibaba_internal_relay
+  base_url: https://iai.alibaba-inc.com/relay/v1
+  requested_model: gpt-6-luna
+  response_model_policy: record_each_response
+  model_substitution_note: "Author-authorized replacement for the blocked DeepSeek route. This lightweight GPT model is distinct from the gpt-6-sol judge but belongs to the same GPT family; Qwen remains the cross-family judge. The alias is not a frozen snapshot."
+  temperature: 0.7
+  max_output_tokens: 256
+  reasoning_effort: none
+  seed_supported: false
+  concurrency_start: 16
+  retry_attempts: 3
+  request_timeout_seconds: 90
+  credential_env: SBE_IAI_API_KEY
+  emp_id_env: SBE_IAI_EMP_ID
+  iai_tag: sbe-computers-major-r1-gpt6luna-main
+
+deepseek:
+  enabled: false
+  status: superseded_after_pre_inference_relay_blocker
+  provider: alibaba_internal_dashscope_relay
+  base_url: https://cn-iai.alibaba-inc.com/dashscope
+  requested_model: deepseek-r1
+  response_model_policy: record_each_response
+  model_substitution_note: "Historical blocked candidate only. Both deepseek-r1 and deepseek-v4-pro-0813 failed before inference at the relay billing-configuration layer; the author subsequently authorized gpt-6-luna as the locked external generator."
+  temperature: 0.7
+  top_p: null
+  max_tokens: 256
+  seed_supported: false
+  concurrency_start: 16
+  retry_attempts: 3
+  request_timeout_seconds: 180
+  credential_env: SBE_IAI_API_KEY
+  emp_id_env: SBE_IAI_EMP_ID
+  iai_tag: sbe-computers-major-r1-deepseek-main
+
+gpt:
+  provider: alibaba_internal_relay
+  base_url: https://iai.alibaba-inc.com/relay/v1
+  candidate_models:
+    - gpt-6-sol
+    - gpt-6-luna
+    - gpt-5.6-luna
+  selected_model: gpt-6-sol
+  selection_status: locked_after_80_item_pilot
+  selection_note: "The internal relay does not expose the originally requested fixed GPT-5.4 snapshot. gpt-6-sol was locked before formal runs after an 80-item real-data pilot (80/80 schema-valid); projected judge cost including a 20% retry reserve was about USD 220, within the author-provided USD 300 ceiling. The alias is not treated as a frozen snapshot."
+  reasoning_effort: none
+  temperature: null
+  max_output_tokens_judge: 512
+  max_output_tokens_reference: 256
+  concurrency_start: 16
+  retry_attempts: 3
+  credential_env: SBE_IAI_API_KEY
+  emp_id_env: SBE_IAI_EMP_ID
+  budget_usd: 300.0
+  operational_gpt_hard_cap_usd: 240.0
+
+robustness:
+  models:
+    - qwen35_4b
+    - qwen35_9b
+    - qwen35_35b_a3b
+    - qwen36_27b
+    - qwen36_35b_a3b
+  scenario_count: 320
+  interior_ratios: [0.16666666666666666, 0.3333333333333333, 0.5, 0.6666666666666666, 0.8333333333333334]
+  seeds: [1, 2, 3]
+  conditions:
+    - condition_id: p1_high
+      prompt_template_id: computers_explicit_ratio_v1
+      temperature: 0.7
+      source: reuse_main
+    - condition_id: p2_high
+      prompt_template_id: computers_explicit_ratio_v2
+      temperature: 0.7
+      source: reuse_then_generate_missing
+    - condition_id: p1_low
+      prompt_template_id: computers_explicit_ratio_v1
+      temperature: 0.2
+      source: reuse_then_generate_missing
+    - condition_id: p2_low
+      prompt_template_id: computers_explicit_ratio_v2
+      temperature: 0.2
+      source: reuse_then_generate_missing
+  top_p: 0.9
+  max_new_tokens: 256
+  thinking: disabled
+  retry_attempts: 3
+  request_timeout_seconds: 180
+
+statistics:
+  cluster_unit: scenario_id
+  bootstrap_iterations: 10000
+  bootstrap_seed: 20260916
+  multiple_comparison_correction: holm
